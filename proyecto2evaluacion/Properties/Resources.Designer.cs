@@ -93,6 +93,16 @@ namespace proyecto2evaluacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap numeros {
+            get {
+                object obj = ResourceManager.GetObject("numeros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap numprimos {
             get {
                 object obj = ResourceManager.GetObject("numprimos", resourceCulture);
