@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proyecto2evaluacion
+namespace Numeros
 {
     public partial class Form1 : Form
     {
@@ -18,6 +18,12 @@ namespace proyecto2evaluacion
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            Fibonacci.Formfibonacci oFibo = new Fibonacci.Formfibonacci();
+            oFibo.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

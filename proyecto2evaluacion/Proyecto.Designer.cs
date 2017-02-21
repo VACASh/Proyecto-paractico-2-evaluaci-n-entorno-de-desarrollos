@@ -1,6 +1,6 @@
-﻿namespace proyecto2evaluacion
+﻿namespace numeros
 {
-    partial class Form1
+    partial class Proyecto
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -59,6 +59,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(61, 285);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
@@ -76,7 +77,7 @@
             // 
             // button4
             // 
-            this.button4.Image = global::proyecto2evaluacion.Properties.Resources.primitiva;
+            this.button4.Image = global::numeros.Properties.Resources.primitiva;
             this.button4.Location = new System.Drawing.Point(433, 199);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 74);
@@ -85,16 +86,17 @@
             // 
             // button3
             // 
-            this.button3.Image = global::proyecto2evaluacion.Properties.Resources.primos;
+            this.button3.Image = global::numeros.Properties.Resources.primos;
             this.button3.Location = new System.Drawing.Point(61, 199);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 74);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Image = global::proyecto2evaluacion.Properties.Resources.hanoi;
+            this.button2.Image = global::numeros.Properties.Resources.hanoi;
             this.button2.Location = new System.Drawing.Point(433, 61);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 74);
@@ -103,7 +105,7 @@
             // 
             // button1
             // 
-            this.button1.Image = global::proyecto2evaluacion.Properties.Resources.fibonnaci1;
+            this.button1.Image = global::numeros.Properties.Resources.fibonnaci1;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button1.Location = new System.Drawing.Point(61, 61);
             this.button1.Name = "button1";
@@ -117,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.numeros;
+            this.BackgroundImage = global::numeros.Properties.Resources.numeros;
             this.ClientSize = new System.Drawing.Size(578, 326);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -127,8 +129,11 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
-            this.Text = "fibonacci";
+            this.Text = "proyecto";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

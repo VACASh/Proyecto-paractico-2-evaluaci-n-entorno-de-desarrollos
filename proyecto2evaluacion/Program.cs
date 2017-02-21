@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proyecto2evaluacion
+namespace Numeros
 {
     static class Program
     {

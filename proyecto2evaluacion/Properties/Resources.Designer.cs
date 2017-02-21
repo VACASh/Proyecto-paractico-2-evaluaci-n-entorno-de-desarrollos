@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace proyecto2evaluacion.Properties {
+namespace Numeros.Properties {
     using System;
     
     
