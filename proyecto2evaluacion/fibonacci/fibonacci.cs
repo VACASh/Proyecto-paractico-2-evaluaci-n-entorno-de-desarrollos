@@ -12,10 +12,12 @@ namespace Numeros.Fibonacci
 {
     public partial class Formfibonacci : Form
     {
+        
         public Formfibonacci()
         {
             InitializeComponent();
         }
+
         /// <summary>
         ///  Este programa introduces un número por un textbox
         ///  calcula los números fibonacci que hay entre el 0 y el número introducido
@@ -27,40 +29,48 @@ namespace Numeros.Fibonacci
         /// <remarks>En el momento que fibo1 es mayor o  igual al número introducido
         /// el programa para y muestra los números
         /// </remarks>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+       
+        string textFibo(int num1)
         {
-
-            int numintroducido, fibo1, fibo2, fibo3;
+            
+            int  fibo1, fibo2, fibo3;
             string texto;
-            texto = "";
+            texto = "Estos son los números fibonacci hasta el número introducido: ";
 
             fibo1 = 0;
             texto = texto + fibo1 + ",";
             fibo2 = 1;
 
-            numintroducido = int.Parse(textBox1.Text);
+          
             
-            for (int i = 0; fibo1 < numintroducido; i++)
+            for (int i = 0; fibo1 < num1; i++)
             {
                 fibo3 = fibo1;
                 fibo1 = fibo1 + fibo2;
                 fibo2 = fibo3;
-                if (fibo1 < numintroducido)
+                if (fibo1 < num1)
                 {
                     texto = texto + fibo1 + ",";
                 }
             }
-            MessageBox.Show(texto);
-
-
-
+            return texto;
         }
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Formfibonacci_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bFibo(object sender, EventArgs e)
+        {
+            int num = int.Parse(Tfibo.Text);
+            MessageBox.Show(textFibo(num));
         }
     }
 }

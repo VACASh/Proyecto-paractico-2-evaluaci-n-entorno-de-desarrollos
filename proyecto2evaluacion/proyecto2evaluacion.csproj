@@ -58,6 +58,15 @@
     <Compile Include="Formnumeros.Designer.cs">
       <DependentUpon>Formnumeros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Números primos\Primos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Números primos\Primos.designer.cs">
+      <DependentUpon>Primos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Números primos\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fibonacci\Formfibonacci.resx">
@@ -65,6 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formnumeros.resx">
       <DependentUpon>Formnumeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Números primos\Primos.resx">
+      <DependentUpon>Primos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="La primitiva\" />
-    <Folder Include="Números primos\" />
     <Folder Include="Torres de Hanoi\" />
   </ItemGroup>
   <ItemGroup>

@@ -27,5 +27,16 @@ namespace Numeros
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Primos.Formprimos oPrimos = new Primos.Formprimos();
+            oPrimos.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
