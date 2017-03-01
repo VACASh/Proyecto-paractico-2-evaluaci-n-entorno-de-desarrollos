@@ -62,17 +62,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fibonacci\fibonacci.cs">
+    <Compile Include="fibonacci\numFibo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fibonacci\fibonacci.designer.cs">
-      <DependentUpon>fibonacci.cs</DependentUpon>
+    <Compile Include="fibonacci\numFibo.designer.cs">
+      <DependentUpon>numFibo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formnumeros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formnumeros.Designer.cs">
       <DependentUpon>Formnumeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="La primitiva\laPrimitiva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="La primitiva\laPrimitiva.designer.cs">
+      <DependentUpon>laPrimitiva.cs</DependentUpon>
     </Compile>
     <Compile Include="Números primos\Primos.cs">
       <SubType>Form</SubType>
@@ -85,11 +91,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fibonacci\fibonacci.resx">
-      <DependentUpon>fibonacci.cs</DependentUpon>
+    <Compile Include="Torres de Hanoi\torresDeHanoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torres de Hanoi\torresDeHanoi.designer.cs">
+      <DependentUpon>torresDeHanoi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fibonacci\numFibo.resx">
+      <DependentUpon>numFibo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formnumeros.resx">
       <DependentUpon>Formnumeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="La primitiva\laPrimitiva.resx">
+      <DependentUpon>laPrimitiva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Números primos\Primos.resx">
       <DependentUpon>Primos.cs</DependentUpon>
@@ -104,6 +119,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Torres de Hanoi\torresDeHanoi.resx">
+      <DependentUpon>torresDeHanoi.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,10 +153,7 @@
   <ItemGroup>
     <None Include="Resources\primitiva.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="La primitiva\" />
-    <Folder Include="Torres de Hanoi\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\numeros.jpg" />
   </ItemGroup>
