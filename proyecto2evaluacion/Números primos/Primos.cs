@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace Numeros.Primos
 {
-    public partial class Formprimos : Form
+    /// <summary>
+    /// Formulario de números primos
+    /// <remarks>las constantes kFilas y kCol so lsa filas y columnas de la matriz en la que ingresamos los num primos</remarks>
+    /// </summary>
+    public partial class formPrimos : Form
     {
-        /// <summary>
-        /// constantes para el número de columnas y filas. Y creamos la matriz
-        /// </summary>
-        const int kfilas = 5;
-        const int kcol = 6;
+        //num de filas y columnas 
+        const int kFilas = 5;
+        const int kCol = 6;
 
-        int[,] matriz = new int[kfilas, kcol];
+        int[,] matrizPrimos = new int[kFilas, kCol];
 
         /// <summary>
         /// Objeto de texto que usamos para ingresar números
@@ -44,43 +46,43 @@ namespace Numeros.Primos
         /// </summary>
         /// <remarks>cuando llega a la mitad del número ya comprueba todas las posibilidades de 
         /// que sea primo</remarks>
-        /// <param name="num">El numero que se le pasa para comprobar si es primo</param>
+        /// <param name="numRecibido">El numero que se le pasa para comprobar si es primo</param>
         /// <returns>Devuelve booleano si es primo devuelve true si no es primo devuelve false</returns>
-        bool esPrimo(int num)
+        bool esPrimo(int numRecibido)
         {
 
-            bool primo = true;
+            bool buscarPrimo = true;
 
-            for (int i = 2; i <= num/2 &&  primo; i++)
+            for (int i = 2; i <= numRecibido/2 &&  buscarPrimo; i++)
             {
 
-                if (num%i==0)
+                if (numRecibido%i==0)
                 {
 
-                    primo = false;
+                    buscarPrimo = false;
 
                 }
 
             }
 
-            return primo;
+            return buscarPrimo;
 
         }
 
         /// <summary>
         /// Va ingresando números a la matriz  y rellenandola
         /// </summary>
-        /// <param name="Matriz">matriz donde ingresas números </param>
-        void ingresarMatriz(int [,] Matriz)
+        /// <param name="culaqueirMatriz">matriz donde ingresas números </param>
+        void ingresarMatriz(int [,] culaqueirMatriz)
         {
             
-            for (int i = 0; i < Matriz.GetLength(0); i++)
+            for (int i = 0; i < culaqueirMatriz.GetLength(0); i++)
             {
 
-                for (int j = 0; j < Matriz.GetLength(1); j++)
+                for (int j = 0; j < culaqueirMatriz.GetLength(1); j++)
                 {
 
-                    Matriz[i, j] = int.Parse(InputBox("Elemento[" + i + ", " + j + "]"));
+                    culaqueirMatriz[i, j] = int.Parse(InputBox("Elemento[" + i + ", " + j + "]"));
 
                 }
 
@@ -91,23 +93,23 @@ namespace Numeros.Primos
         /// <summary>
         /// Almacena los números primos dentro de la matriz en un string 
         /// </summary>
-        /// <param name="matriz">Matriz de números</param>
+        /// <param name="cualquierMatrizComprobar">Matriz de números</param>
         /// <returns>Devuelve string con los números primos</returns>
-        string comprobarPrimo(int[,] matriz)
+        string comprobarMatriz(int[,] cualquierMatrizComprobar)
         {
 
-            string texto = "Los números primos dentro de la matriz son: \n";
+            string textoMatrices = "Los números primos dentro de la matriz son: \n";
 
-            for (int i = 0; i < matriz.GetLength(0); i++)
+            for (int i = 0; i < cualquierMatrizComprobar.GetLength(0); i++)
             {
 
-                for (int j = 0; j < matriz.GetLength(1); j++)
+                for (int j = 0; j < cualquierMatrizComprobar.GetLength(1); j++)
                 {
 
-                    if (esPrimo(matriz[i, j]))
+                    if (esPrimo(cualquierMatrizComprobar[i, j]))
                     {
 
-                        texto = texto + "de la posicion " + i + "," + j +   "el valor" +matriz[i, j] + "\n";
+                        textoMatrices = textoMatrices + "de la posicion " + i + "," + j +   "el valor: " +cualquierMatrizComprobar[i, j] + "\n";
 
                     }
 
@@ -115,10 +117,14 @@ namespace Numeros.Primos
 
             }
 
-            return texto;      
+            return textoMatrices;      
 
         }
-        public Formprimos()
+
+        /// <summary>
+        /// inicializa formulario
+        /// </summary>
+        public formPrimos()
         {
             InitializeComponent();
         }
@@ -133,13 +139,18 @@ namespace Numeros.Primos
         private void bPrimos(object sender, EventArgs e)
         {
 
-            ingresarMatriz(matriz);
-            string texto = comprobarPrimo(matriz);
+            ingresarMatriz(matrizPrimos);
+            string texto = comprobarMatriz(matrizPrimos);
 
             MessageBox.Show(texto);
 
         }
 
+        /// <summary>
+        /// Cargar la parte visual del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
 

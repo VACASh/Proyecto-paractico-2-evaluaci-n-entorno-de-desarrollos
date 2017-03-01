@@ -10,17 +10,30 @@ using System.Windows.Forms;
 
 namespace Numeros
 {
-    public partial class Form1 : Form
+    /// <summary>
+    /// Formulario principal donde esta el acceso a los demas formularios
+    /// </summary>
+    public partial class formNumeros : Form
     {
-        public Form1()
+        /// <summary>
+        /// Inicializa el formulario
+        /// </summary>
+        public formNumeros()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Botón que llama al objeto fibonnaci y accede al formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bFibo(object sender, EventArgs e)
         {
-            Fibonacci.Formfibonacci oFibo = new Fibonacci.Formfibonacci();
+
+            Fibonacci.formFibo oFibo = new Fibonacci.formFibo();
             oFibo.ShowDialog();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,13 +41,32 @@ namespace Numeros
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Botón que llama al objeto primos y accede al formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bPrimos(object sender, EventArgs e)
         {
-            Primos.Formprimos oPrimos = new Primos.Formprimos();
+            Primos.formPrimos oPrimos = new Primos.formPrimos();
             oPrimos.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Botón que llama al formulario de las torres de hanoi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bTorresHanoi(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Botón que llama al formulario de loteria
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bPrimitiva(object sender, EventArgs e)
         {
 
         }

@@ -1,6 +1,6 @@
 ﻿namespace Numeros.Fibonacci
 {
-    partial class Formfibonacci
+    partial class formFibo
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.Tfibo = new System.Windows.Forms.TextBox();
+            this.tFibo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -45,10 +45,10 @@
             // 
             // textBox2
             // 
-            this.Tfibo.Location = new System.Drawing.Point(75, 56);
-            this.Tfibo.Name = "textBox2";
-            this.Tfibo.Size = new System.Drawing.Size(75, 20);
-            this.Tfibo.TabIndex = 1;
+            this.tFibo.Location = new System.Drawing.Point(75, 56);
+            this.tFibo.Name = "textBox2";
+            this.tFibo.Size = new System.Drawing.Size(75, 20);
+            this.tFibo.TabIndex = 1;
             // 
             // label1
             // 
@@ -63,7 +63,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(465, 336);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Tfibo);
+            this.Controls.Add(this.tFibo);
             this.Controls.Add(this.button2);
             this.Name = "Formfibonacci";
             this.Load += new System.EventHandler(this.Formfibonacci_Load);
@@ -77,7 +77,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox Tfibo;
+        private System.Windows.Forms.TextBox tFibo;
         private System.Windows.Forms.Label label1;
     }
 }
