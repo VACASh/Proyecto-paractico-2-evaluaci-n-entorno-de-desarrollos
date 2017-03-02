@@ -59,7 +59,8 @@ namespace Numeros
         /// <param name="e"></param>
         private void bTorresHanoi(object sender, EventArgs e)
         {
-
+            Hanoi.toresHanoi oHanoi = new Hanoi.toresHanoi();
+            oHanoi.ShowDialog();
         }
         /// <summary>
         /// Botón que llama al formulario de loteria
@@ -68,6 +69,9 @@ namespace Numeros
         /// <param name="e"></param>
         private void bPrimitiva(object sender, EventArgs e)
         {
+
+            Primitiva.jugarPrimitiva oPrimitiva = new Primitiva.jugarPrimitiva();
+            oPrimitiva.ShowDialog();
 
         }
     }

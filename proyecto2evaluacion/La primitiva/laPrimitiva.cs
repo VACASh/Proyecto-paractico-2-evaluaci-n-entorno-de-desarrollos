@@ -9,18 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 
-namespace ejercicio9
+namespace Numeros.Primitiva
 {
-    
-    public partial class Form1 : Form
+    /// <summary>
+    /// Clase primitiva donde juegas tus 6 números y compruebas si has ganado
+    /// <remarks>Constante kPrimitiva para que solo se puedan jugar 6 números</remarks>
+    /// </summary>
+    public partial class jugarPrimitiva : Form
     {
-        ArrayList primitiva = new ArrayList();
-        ArrayList jugar = new ArrayList();
+        ArrayList arrayPrimitiva = new ArrayList();
+        ArrayList arrayJugar = new ArrayList();
 
-        const int Kprimitiva = 6;
+        const int kPrimitiva = 6;
 
-        Random rndloteria = new Random();
+        Random randomLoteria = new Random();
 
+        /// <summary>
+        /// Inputbox
+        /// </summary>
+        /// <param name="texto">texto de entrada</param>
+        /// <returns></returns>
         private static string InputBox(string texto)
         {
             InputBoxDialog ib = new InputBoxDialog();
@@ -31,119 +39,211 @@ namespace ejercicio9
             ib.Close();
             return s;
         }
-        public Form1()
+
+        /// <summary>
+        /// inicializa componentes
+        /// </summary>
+        public jugarPrimitiva()
         {
             InitializeComponent();
         }
-        bool comprobarrepe(ArrayList lista, int num)
+
+        /// <summary>
+        /// comprueba que no metas un número repetido
+        /// </summary>
+        /// <remarks>en el omemto que lo encuentra no continua en el bucle </remarks>
+        /// <param name="listaComprobar">lista de comparación</param>
+        /// <param name="numeroComprobar">Número a comprobar</param>
+        /// <returns>devuelve true si el número esta repetido  false si no esta repetido</returns>
+        bool comprobarRepetido(ArrayList listaComprobar, int numeroComprobar)
         {
+
             int i = 0;
-            bool encontrado = false;
-            while(i < Kprimitiva && encontrado == false)
+            bool numEncontrado = false;
+
+            while(i < kPrimitiva && numEncontrado == false)
             {
                 
-                if (lista.Contains(num))
+                if (listaComprobar.Contains(numeroComprobar))
                 {
-                    encontrado = true;
+
+                    numEncontrado = true;
                     MessageBox.Show("Inserte un número que no este repetido");
+
                 }
                 else
-                {           
+                {    
+                           
                     i++;
+
                 }
+
             }
-            return encontrado;
+
+            return numEncontrado;
 
         }
-        void rellenearprimitiva(ArrayList lista)
+
+        /// <summary>
+        /// rellena el arraylist de los números que vas a jugar .
+        /// <remarks>ingresas los números por inputbox  llama al metodo comprobarrrepe para
+        /// que no ingreses números repetidos si esta repetido no avanzas y tienes que volver a ingresarlo</remarks>
+        /// </summary>
+        /// <param name="listaParaJugar">Lista en la que ingreas números</param>
+        void rellenarPrimitiva(ArrayList listaParaJugar)
         {
             
             int i = 0;
-            while (i < Kprimitiva)
+            while (i < kPrimitiva)
             {
+
                 int num = int.Parse(InputBox("Introduzca número: "));
+
                 if (num < 50 && num > 0)
                 {
                 
-                    if (comprobarrepe(lista, num))
+                    if (comprobarRepetido(listaParaJugar, num))
                     {
+
                         MessageBox.Show("esta repetido");
+
                     }
                     else
                     {
-                        lista.Add(num);
+
+                        listaParaJugar.Add(num);
                         i++;
+
                     }
 
                 }
                 else
                 {
+
                     MessageBox.Show("El número tiene que estar entre 1 y 49");
+
                 }
                 
-
             }
+
         }
-        void rellenarpremiado(ArrayList lista)
+
+        /// <summary>
+        /// Lista donde se ingresan números premiados de forma aleatoria.
+        /// </summary>
+        /// <remarks>Los números son random pero solo estan comprendidos entre el 0 y el 49</remarks>
+        /// <param name="listaPremiados">Lista donde ingresas números premiados</param>
+        void rellenarPremiado(ArrayList listaPremiados)
         {
             
             int i = 0;
-            while (i < Kprimitiva)
+
+            while (i < kPrimitiva)
             {
-                int num = rndloteria.Next(49);
-                if (comprobarrepe(lista, num))
+
+                int numRandom = randomLoteria.Next(49);
+
+                if (comprobarRepetido(listaPremiados, numRandom))
                 {
+
                     MessageBox.Show("esta repetido");
+
                 }
                 else
                 {
-                    lista.Add(num);
+
+                    listaPremiados.Add(numRandom);
                     i++;
+
                 }
 
 
             }
         }
 
-        string loteria(ArrayList primitiva, ArrayList jugar)
+        /// <summary>
+        /// String donde compara la lista de jeugos con la lista premiada y va añadiendo el número de aciertos
+        /// </summary>
+        /// <remarks>Si haciertas todos te dice que has ganado, si no te dice los números que has acertado.
+        /// en el caso de que no aciertes nada tambien te devolvera que no has acertado ninguno </remarks>
+        /// <param name="ListaPremiada">Lista de números premiados</param>
+        /// <param name="ListaDondeJuegas">Lista de números que juegas</param>
+        /// <returns>Devuelve el string con lo que has acertado </returns>
+        string textoLoteria(ArrayList ListaPremiada, ArrayList ListaDondeJuegas)
         {
-            string texto = "has acertado: \n ";
-            int cont = 0;
-            for (int i = 0; i < primitiva.Count; i++)
+            string textoAciertos = "has acertado: \n ";
+            int numContador = 0;
+
+            for (int i = 0; i < ListaPremiada.Count; i++)
             {
-                if (primitiva.Contains(jugar[i]))
+
+                if (ListaPremiada.Contains(ListaDondeJuegas[i]))
                 {
-                    cont++;
-                    texto = texto + primitiva[i] + ",";
+
+                    numContador++;
+                    textoAciertos = textoAciertos + ListaPremiada[i] + ",";
+
                 }
+
             }
-            if (cont == 0)
+
+            if (numContador == 0)
             {
-                texto = "No has acertado ninguno";
+
+                textoAciertos = "No has acertado ninguno";
+
             }
-            if (cont == 6)
+
+            if (numContador == 6)
             {
-                texto = "Has acertado todas YOU WIN!!!";
+
+                textoAciertos = "Has acertado todas YOU WIN!!!";
+
             }
-            return texto;
+
+            return textoAciertos;
+
         }
 
 
-
-        private void button2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Botón donde se hace el sorteo y lo compara con los números que has ingresado
+        /// </summary>
+        /// <remarks>Primero rellena la lista con números aleatorios antes de almacenar texto</remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bMuestraPremio(object sender, EventArgs e)
         {
             
-            rellenarpremiado(jugar);
-            string texto = loteria(primitiva, jugar);
-            MessageBox.Show(texto);
+            rellenarPremiado(arrayJugar);
+
+            string textoMostrar = textoLoteria(arrayPrimitiva, arrayJugar);
+
+            MessageBox.Show(textoMostrar);
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// este botón llama a un metodo para rellenar tu primitiva 
+        /// </summary>
+        /// <remarks>---</remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bRellenaTuPrimitiva(object sender, EventArgs e)
         {
             
-            rellenearprimitiva(primitiva);
+            rellenarPrimitiva(arrayPrimitiva);
             
+        }
+
+        /// <summary>
+        /// carga la parte visual del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

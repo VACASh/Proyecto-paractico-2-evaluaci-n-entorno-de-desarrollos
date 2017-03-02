@@ -1,6 +1,6 @@
-﻿namespace ejercicio9
+﻿namespace Numeros.Primitiva
 {
-    partial class Form1
+    partial class jugarPrimitiva
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -40,7 +40,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "rellenar primitiva";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.bRellenaTuPrimitiva);
             // 
             // button2
             // 
@@ -50,7 +50,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Prueba suerte";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.bMuestraPremio);
             // 
             // Form1
             // 
@@ -61,6 +61,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
