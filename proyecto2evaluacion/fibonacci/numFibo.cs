@@ -54,7 +54,7 @@ namespace Numeros.Fibonacci
                 numFibo1 = numFibo1 + numFibo2;
                 numFibo2 = auxFibo;
 
-                if (numFibo1 < numIntroducido)
+                if (numFibo1 <= numIntroducido)
                 {
 
                     textoAlmacenaFibo = textoAlmacenaFibo + numFibo1 + ",";
