@@ -16,7 +16,7 @@ namespace Numeros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formNumeros());
+            Application.Run(new tNumeros());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Numeros.Primos
     /// Formulario de números primos
     /// <remarks>las constantes kFilas y kCol so lsa filas y columnas de la matriz en la que ingresamos los num primos</remarks>
     /// </summary>
-    public partial class formPrimos : Form
+    public partial class tPrimos : Form
     {
         //num de filas y columnas 
         const int kFilas = 5;
@@ -124,7 +124,7 @@ namespace Numeros.Primos
         /// <summary>
         /// inicializa formulario
         /// </summary>
-        public formPrimos()
+        public tPrimos()
         {
             InitializeComponent();
         }

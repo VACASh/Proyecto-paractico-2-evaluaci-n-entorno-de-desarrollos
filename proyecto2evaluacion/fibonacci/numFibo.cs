@@ -13,12 +13,12 @@ namespace Numeros.Fibonacci
     /// <summary>
     /// Formulario de números fibonacci
     /// </summary>
-    public partial class formFibo : Form
+    public partial class numFibonacci : Form
     {
         /// <summary>
         /// Inicializa componentes
         /// </summary>
-        public formFibo()
+        public numFibonacci()
         {
             InitializeComponent();
         }

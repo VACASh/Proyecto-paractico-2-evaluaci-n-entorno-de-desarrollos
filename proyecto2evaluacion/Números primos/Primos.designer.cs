@@ -1,6 +1,6 @@
 ﻿namespace Numeros.Primos
 {
-    partial class formPrimos
+    partial class tPrimos
     {
         /// <summary>
         /// Variable del diseñador necesaria.

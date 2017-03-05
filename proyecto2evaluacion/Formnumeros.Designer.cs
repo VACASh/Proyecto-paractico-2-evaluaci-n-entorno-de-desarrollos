@@ -1,6 +1,6 @@
 ﻿namespace Numeros
 {
-    partial class formNumeros
+    partial class tNumeros
     {
         /// <summary>
         /// Variable del diseñador necesaria.

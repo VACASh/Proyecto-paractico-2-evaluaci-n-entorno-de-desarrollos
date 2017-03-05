@@ -13,12 +13,12 @@ namespace Numeros
     /// <summary>
     /// Formulario principal donde esta el acceso a los demas formularios
     /// </summary>
-    public partial class formNumeros : Form
+    public partial class tNumeros : Form
     {
         /// <summary>
         /// Inicializa el formulario
         /// </summary>
-        public formNumeros()
+        public tNumeros()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace Numeros
         private void bFibo(object sender, EventArgs e)
         {
 
-            Fibonacci.formFibo oFibo = new Fibonacci.formFibo();
+            Fibonacci.numFibonacci oFibo = new Fibonacci.numFibonacci();
             oFibo.ShowDialog();
 
         }
@@ -48,7 +48,7 @@ namespace Numeros
         /// <param name="e"></param>
         private void bPrimos(object sender, EventArgs e)
         {
-            Primos.formPrimos oPrimos = new Primos.formPrimos();
+            Primos.tPrimos oPrimos = new Primos.tPrimos();
             oPrimos.ShowDialog();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Numeros.Fibonacci
 {
-    partial class formFibo
+    partial class numFibonacci
     {
         /// <summary>
         /// Variable del diseñador necesaria.
