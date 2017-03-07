@@ -11,8 +11,8 @@ using System.Windows.Forms;
 namespace Numeros.Primos
 {
     /// <summary>
-    /// Formulario de números primos
-    /// <remarks>las constantes kFilas y kCol so lsa filas y columnas de la matriz en la que ingresamos los num primos</remarks>
+    /// Clase parcial de números primos
+    /// <remarks>las constantes kFilas y kCol soN laS filas y columnas de la matriz en la que ingresamos los num primos</remarks>
     /// </summary>
     public partial class tPrimos : Form
     {
@@ -134,8 +134,8 @@ namespace Numeros.Primos
         /// despues comprueba que números de los que has ingresado son primos
         /// y por ultimo los muestra
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">lanza la funcion que llama al botón bPrimos</param>
+        /// <param name="e">sin uso</param>
         private void bPrimos(object sender, EventArgs e)
         {
 
@@ -149,8 +149,8 @@ namespace Numeros.Primos
         /// <summary>
         /// Cargar la parte visual del formulario
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Lanza el evento que carga pa larte visual del formulario</param>
+        /// <param name="e">sin uso</param>
         private void Form1_Load(object sender, EventArgs e)
         {
 

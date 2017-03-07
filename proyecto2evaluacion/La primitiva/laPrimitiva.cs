@@ -166,22 +166,22 @@ namespace Numeros.Primitiva
         /// </summary>
         /// <remarks>Si haciertas todos te dice que has ganado, si no te dice los números que has acertado.
         /// en el caso de que no aciertes nada tambien te devolvera que no has acertado ninguno </remarks>
-        /// <param name="ListaPremiada">Lista de números premiados</param>
+        /// <param name="listaPremiada">Lista de números premiados</param>
         /// <param name="ListaDondeJuegas">Lista de números que juegas</param>
         /// <returns>Devuelve el string con lo que has acertado </returns>
-        string textoLoteria(ArrayList ListaPremiada, ArrayList ListaDondeJuegas)
+        string textoLoteria(ArrayList listaPremiada, ArrayList ListaDondeJuegas)
         {
             string textoAciertos = "has acertado: \n ";
             int numContador = 0;
 
-            for (int i = 0; i < ListaPremiada.Count; i++)
+            for (int i = 0; i < listaPremiada.Count; i++)
             {
 
-                if (ListaPremiada.Contains(ListaDondeJuegas[i]))
+                if (listaPremiada.Contains(ListaDondeJuegas[i]))
                 {
 
                     numContador++;
-                    textoAciertos = textoAciertos + ListaPremiada[i] + ",";
+                    textoAciertos = textoAciertos + listaPremiada[i] + ",";
 
                 }
 
@@ -210,8 +210,8 @@ namespace Numeros.Primitiva
         /// Botón donde se hace el sorteo y lo compara con los números que has ingresado
         /// </summary>
         /// <remarks>Primero rellena la lista con números aleatorios antes de almacenar texto</remarks>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Lanza el evento del botón bMuestraPremio</param>
+        /// <param name="e">sin uso</param>
         private void bMuestraPremio(object sender, EventArgs e)
         {
             
@@ -227,8 +227,8 @@ namespace Numeros.Primitiva
         /// este botón llama a un metodo para rellenar tu primitiva 
         /// </summary>
         /// <remarks>---</remarks>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Lanza el evento del botón bRellenaTuPrimtiva</param>
+        /// <param name="e">sin uso</param>
         private void bRellenaTuPrimitiva(object sender, EventArgs e)
         {
             
@@ -239,8 +239,8 @@ namespace Numeros.Primitiva
         /// <summary>
         /// carga la parte visual del formulario
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">lanza el evento que carga a la parte visual del formulario</param>
+        /// <param name="e">sin uso</param>
         private void Form1_Load(object sender, EventArgs e)
         {
 

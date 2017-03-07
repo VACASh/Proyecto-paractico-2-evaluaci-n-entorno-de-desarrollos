@@ -54,8 +54,8 @@ namespace Numeros.Hanoi
         /// necesarios para lograr ganar
         /// </summary>
         /// <remarks>El número de discos que vamos a pasar al metodo se recibe por un textbox</remarks>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">lanza el evento que llama al botón bHanoi</param>
+        /// <param name="e">sin uso</param>
         private void bHanoi(object sender, EventArgs e)
         {
 
@@ -63,7 +63,7 @@ namespace Numeros.Hanoi
             string textoMovimentos = "";
 
             torresDeHanoi(numDiscos, "origen", "destino", "auxiliar", ref textoMovimentos);
-            labelMovimentos.Text = textoMovimentos;
+            textBox1.Text = textoMovimentos;
 
         }
 
@@ -71,9 +71,14 @@ namespace Numeros.Hanoi
         /// <summary>
         /// carga la parte visual del formulario
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Lanza el evento que carga la parte visual del formulario</param>
+        /// <param name="e">sin uso</param>
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

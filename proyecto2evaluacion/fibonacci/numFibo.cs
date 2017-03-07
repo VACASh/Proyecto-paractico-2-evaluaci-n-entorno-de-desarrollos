@@ -11,10 +11,11 @@ using System.Windows.Forms;
 namespace Numeros.Fibonacci
 {
     /// <summary>
-    /// Formulario de números fibonacci
+    /// clase  de números fibonacci
     /// </summary>
     public partial class numFibonacci : Form
     {
+        
         /// <summary>
         /// Inicializa componentes
         /// </summary>
@@ -80,8 +81,8 @@ namespace Numeros.Fibonacci
         /// <summary>
         /// carga la parte visual del formulario
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Lanza el evento que carga la parte visual del formulario</param>
+        /// <param name="e">sin uso</param>
         private void Formfibonacci_Load(object sender, EventArgs e)
         {
 
@@ -91,14 +92,23 @@ namespace Numeros.Fibonacci
         /// botón que recibe el número por un textbox y muestra un message box con los números fibonacci
         /// llamando a la funcion textFibo
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Lanza el evento del botón bFibo</param>
+        /// <param name="e">SIN USO</param>
         private void bFibo(object sender, EventArgs e)
         {
+            int numIntroducido;
 
-            int numIntroducido = int.Parse(tFibo.Text);
+            if (int.TryParse(tFibo.Text, out numIntroducido)) 
+            {
+                MessageBox.Show(textFibo(numIntroducido));
+            }
+            else
+	        {
+                MessageBox.Show("Inserte un número entero el resto de parametros son invalidos");
+            }
+             
 
-            MessageBox.Show(textFibo(numIntroducido));
+            
 
         }
     }

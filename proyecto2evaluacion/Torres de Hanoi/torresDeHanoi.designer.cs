@@ -32,6 +32,7 @@
             this.introducirNumeros = new System.Windows.Forms.TextBox();
             this.labelMovimentos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -44,18 +45,18 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.bHanoi);
             // 
-            // textBox1
+            // introducirNumeros
             // 
             this.introducirNumeros.Location = new System.Drawing.Point(135, 20);
-            this.introducirNumeros.Name = "textBox1";
+            this.introducirNumeros.Name = "introducirNumeros";
             this.introducirNumeros.Size = new System.Drawing.Size(49, 20);
             this.introducirNumeros.TabIndex = 1;
             // 
-            // label1
+            // labelMovimentos
             // 
             this.labelMovimentos.AutoSize = true;
             this.labelMovimentos.Location = new System.Drawing.Point(33, 62);
-            this.labelMovimentos.Name = "label1";
+            this.labelMovimentos.Name = "labelMovimentos";
             this.labelMovimentos.Size = new System.Drawing.Size(0, 13);
             this.labelMovimentos.TabIndex = 2;
             // 
@@ -68,16 +69,27 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Numeros de discos con los que juegas";
             // 
-            // Form1
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(26, 54);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(400, 336);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // toresHanoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 413);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelMovimentos);
             this.Controls.Add(this.introducirNumeros);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "toresHanoi";
             this.Text = "Torres de Hanoi";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -91,6 +103,7 @@
         private System.Windows.Forms.TextBox introducirNumeros;
         private System.Windows.Forms.Label labelMovimentos;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

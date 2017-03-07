@@ -116,12 +116,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.bFibo);
             // 
-            // formNumeros
+            // tNumeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.numeros;
-            this.ClientSize = new System.Drawing.Size(578, 326);
+            this.ClientSize = new System.Drawing.Size(601, 326);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -130,7 +130,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "formNumeros";
+            this.Name = "tNumeros";
             this.Text = "fibonacci";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
