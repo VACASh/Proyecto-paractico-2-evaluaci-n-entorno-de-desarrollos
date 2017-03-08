@@ -17,7 +17,7 @@ namespace Numeros.Primos
     /// Clase parcial de números primos
     /// <remarks>las constantes kFilas y kCol soN laS filas y columnas de la matriz en la que ingresamos los num primos</remarks>
     /// </summary>
-    public partial class tPrimos : Form
+    public partial class revisarPrimosMatriz : Form
     {
 
         //num de filas y columnas 
@@ -128,7 +128,7 @@ namespace Numeros.Primos
         /// <summary>
         /// inicializa formulario
         /// </summary>
-        public tPrimos()
+        public revisarPrimosMatriz()
         {
             InitializeComponent();
         }

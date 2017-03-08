@@ -1,6 +1,6 @@
 ﻿namespace Numeros.Primos
 {
-    partial class tPrimos
+    partial class revisarPrimosMatriz
     {
         /// <summary>
         /// Variable del diseñador necesaria.

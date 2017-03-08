@@ -58,7 +58,7 @@ namespace Numeros
         private void bPrimos(object sender, EventArgs e)
         {
             MessageBox.Show("Este aplicacion te pide que ingreses números en una matriz y te dice cuales son primos y que posicion ocupan en la matriz");
-            Primos.tPrimos oPrimos = new Primos.tPrimos();
+            Primos.revisarPrimosMatriz oPrimos = new Primos.revisarPrimosMatriz();
             oPrimos.ShowDialog();
         }
 
