@@ -59,11 +59,21 @@ namespace Numeros.Hanoi
         private void bHanoi(object sender, EventArgs e)
         {
 
-            int numDiscos = int.Parse(introducirNumeros.Text);
+            int numDiscos;
             string textoMovimentos = "";
+           
 
-            torresDeHanoi(numDiscos, "origen", "destino", "auxiliar", ref textoMovimentos);
-            textBox1.Text = textoMovimentos;
+            if (int.TryParse(introducirNumeros.Text, out numDiscos))
+            {
+                torresDeHanoi(numDiscos, "origen", "destino", "auxiliar", ref textoMovimentos);
+                cajaMovimientos.Text = textoMovimentos;
+            }
+            else
+            {
+                MessageBox.Show("Inserte un número entero el resto de parámetros son inválidos");
+            }
+
+           
 
         }
 

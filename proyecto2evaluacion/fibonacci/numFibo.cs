@@ -104,7 +104,7 @@ namespace Numeros.Fibonacci
             }
             else
 	        {
-                MessageBox.Show("Inserte un número entero el resto de parametros son invalidos");
+                MessageBox.Show("Inserte un número entero el resto de parámetros son inválidos");
             }
              
 

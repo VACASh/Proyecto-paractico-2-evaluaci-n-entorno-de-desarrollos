@@ -32,7 +32,7 @@
             this.introducirNumeros = new System.Windows.Forms.TextBox();
             this.labelMovimentos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cajaMovimientos = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -71,20 +71,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 54);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(400, 336);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.cajaMovimientos.Location = new System.Drawing.Point(26, 54);
+            this.cajaMovimientos.Multiline = true;
+            this.cajaMovimientos.Name = "textBox1";
+            this.cajaMovimientos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.cajaMovimientos.Size = new System.Drawing.Size(400, 336);
+            this.cajaMovimientos.TabIndex = 4;
+            this.cajaMovimientos.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // toresHanoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 413);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cajaMovimientos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelMovimentos);
             this.Controls.Add(this.introducirNumeros);
@@ -103,7 +103,7 @@
         private System.Windows.Forms.TextBox introducirNumeros;
         private System.Windows.Forms.Label labelMovimentos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cajaMovimientos;
     }
 }
 
