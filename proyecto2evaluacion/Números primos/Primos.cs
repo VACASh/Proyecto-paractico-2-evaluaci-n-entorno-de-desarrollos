@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// espacio de nombres  de la clase primos
+/// </summary>
 namespace Numeros.Primos
 {
     /// <summary>
@@ -16,6 +19,7 @@ namespace Numeros.Primos
     /// </summary>
     public partial class tPrimos : Form
     {
+
         //num de filas y columnas 
         const int kFilas = 5;
         const int kCol = 6;

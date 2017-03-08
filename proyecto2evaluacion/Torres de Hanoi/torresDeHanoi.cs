@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// espacio de nombres de la clase torres de hanoi
+/// </summary>
 namespace Numeros.Hanoi
 {
     /// <summary>
@@ -32,6 +35,7 @@ namespace Numeros.Hanoi
 
             if (numDiscos > 0)
             {
+
                 //orden de variables importante no modificar
                 torresDeHanoi(numDiscos - 1, discOrigen, discAux, discDestino, ref textoMovimientos);
                 textoMovimientos = textoMovimientos + "Muevo el disco " + numDiscos + " de " + discOrigen + " a "  + discDestino + "\n";
@@ -87,7 +91,11 @@ namespace Numeros.Hanoi
         {
 
         }
-
+        /// <summary>
+        /// textbox donde se almacena el texto
+        /// </summary>
+        /// <param name="sender">Lanza el evento del textbox</param>
+        /// <param name="e">sin uso</param>
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

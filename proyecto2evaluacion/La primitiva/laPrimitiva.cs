@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 
+/// <summary>
+/// Espacio de nombres de la clase primitiva
+/// </summary>
 namespace Numeros.Primitiva
 {
     /// <summary>
