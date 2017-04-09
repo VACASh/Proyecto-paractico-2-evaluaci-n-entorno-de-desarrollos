@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bRellenarFormulario = new System.Windows.Forms.Button();
+            this.bProbarSuerte = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // bRellenarFormulario
             // 
-            this.button1.Location = new System.Drawing.Point(45, 224);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 59);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "rellenar primitiva";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.bRellenaTuPrimitiva);
+            this.bRellenarFormulario.Location = new System.Drawing.Point(45, 224);
+            this.bRellenarFormulario.Name = "bRellenarFormulario";
+            this.bRellenarFormulario.Size = new System.Drawing.Size(83, 59);
+            this.bRellenarFormulario.TabIndex = 0;
+            this.bRellenarFormulario.Text = "rellenar primitiva";
+            this.bRellenarFormulario.UseVisualStyleBackColor = true;
+            this.bRellenarFormulario.Click += new System.EventHandler(this.bRellenaTuPrimitiva);
             // 
-            // button2
+            // bProbarSuerte
             // 
-            this.button2.Location = new System.Drawing.Point(230, 224);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 59);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Prueba suerte";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.bMuestraPremio);
+            this.bProbarSuerte.Location = new System.Drawing.Point(230, 224);
+            this.bProbarSuerte.Name = "bProbarSuerte";
+            this.bProbarSuerte.Size = new System.Drawing.Size(83, 59);
+            this.bProbarSuerte.TabIndex = 1;
+            this.bProbarSuerte.Text = "Prueba suerte";
+            this.bProbarSuerte.UseVisualStyleBackColor = true;
+            this.bProbarSuerte.Click += new System.EventHandler(this.bMuestraPremio);
             // 
-            // Form1
+            // jugarPrimitiva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 333);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.Add(this.bProbarSuerte);
+            this.Controls.Add(this.bRellenarFormulario);
+            this.Name = "jugarPrimitiva";
+            this.Text = "jugarPrimitiva";
+            this.Load += new System.EventHandler(this.formularioPrimitivaLoad);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bRellenarFormulario;
+        private System.Windows.Forms.Button bProbarSuerte;
     }
 }
 

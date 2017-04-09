@@ -18,7 +18,7 @@ namespace Numeros.Hanoi
     /// <remarks>No se pueden hacer con más de 13 discos el número de movimientos necesarios hace
     /// que el programa de error</remarks>
     /// </summary>
-    public partial class toresHanoi : Form
+    public partial class torresHanoi : Form
     {
         /// <summary>
         /// Torres de hanoi recursivo donde se le pasa el número de discos y te dice que movimientos deberias hacer para completarlo
@@ -48,7 +48,7 @@ namespace Numeros.Hanoi
         /// <summary>
         /// inicializa componentes
         /// </summary>
-        public toresHanoi()
+        public torresHanoi()
         {
             InitializeComponent();
         }
@@ -58,12 +58,12 @@ namespace Numeros.Hanoi
         /// necesarios para lograr ganar
         /// </summary>
         /// <remarks>El número de discos que vamos a pasar al metodo se recibe por un textbox</remarks>
-        /// <param name="sender">lanza el evento que llama al botón bHanoi</param>
+        /// <param name="sender">lanza el el botón bHanoi</param>
         /// <param name="e">sin uso</param>
         private void bHanoi(object sender, EventArgs e)
         {
 
-            int numDiscos;
+            int numDiscos =0;
             string textoMovimentos = "";
            
 
@@ -87,16 +87,16 @@ namespace Numeros.Hanoi
         /// </summary>
         /// <param name="sender">Lanza el evento que carga la parte visual del formulario</param>
         /// <param name="e">sin uso</param>
-        private void Form1_Load(object sender, EventArgs e)
+        private void formularioTorresDeHanoiLoad(object sender, EventArgs e)
         {
 
         }
         /// <summary>
         /// textbox donde se almacena el texto
         /// </summary>
-        /// <param name="sender">Lanza el evento del textbox</param>
+        /// <param name="sender">Lanza el  textbox donde almacena movimientos</param>
         /// <param name="e">sin uso</param>
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void tTorresDeHanoiMovimientos_TextChanged(object sender, EventArgs e)
         {
 
         }

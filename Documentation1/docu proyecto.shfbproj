@@ -32,13 +32,12 @@
       <DocumentationSource sourceFile="..\proyecto2evaluacion\bin\Debug\proyecto2evaluacion.xml" />
     </DocumentationSources>
     <NamespaceSummaries>
-      <NamespaceSummaryItem name="Numeros" isDocumented="True">clase con Formulario que  con 4 botones llama a 4 formularios distintos</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="Numeros.Fibonacci" isDocumented="True">Clase fibonnaci</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="Numeros.Primos" isDocumented="True">Clase de números primos</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="System" isDocumented="False" />
-      <NamespaceSummaryItem name="Numeros.Hanoi" isDocumented="True">Clase de las torres de Hanoi</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="Numeros.Primitiva" isDocumented="True">Clase de el juego de la primitiva</NamespaceSummaryItem>
-    </NamespaceSummaries>
+      <NamespaceSummaryItem name="Numeros" isDocumented="True">Nombre de espacios de Numeros</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Numeros.Fibonacci" isDocumented="True">Nombre de espacios Fibonacci</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Numeros.Primos" isDocumented="True">Nombre de espacios números primos</NamespaceSummaryItem>
+<NamespaceSummaryItem name="System" isDocumented="False" />
+<NamespaceSummaryItem name="Numeros.Hanoi" isDocumented="True">Nombre de espacios torres de Hanoi</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Numeros.Primitiva" isDocumented="True">Nombre de espacios primitiva</NamespaceSummaryItem></NamespaceSummaries>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>AllMessages</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
@@ -70,15 +69,16 @@
     <CatalogProductId>VS</CatalogProductId>
     <ApiFilter>
       <Filter entryType="Namespace" fullName="System" isExposed="False" />
-<Filter entryType="Namespace" fullName="System.ComponentModel" isExposed="True">
-  <Filter entryType="Class" fullName="System.ComponentModel.Component" filterName="Component" isExposed="False" />
-</Filter>
-<Filter entryType="Namespace" fullName="System.Windows.Forms" isExposed="True">
-  <Filter entryType="Class" fullName="System.Windows.Forms.ContainerControl" filterName="ContainerControl" isExposed="False" />
-  <Filter entryType="Class" fullName="System.Windows.Forms.Control" filterName="Control" isExposed="False" />
-  <Filter entryType="Class" fullName="System.Windows.Forms.Form" filterName="Form" isExposed="False" />
-  <Filter entryType="Class" fullName="System.Windows.Forms.ScrollableControl" filterName="ScrollableControl" isExposed="False" />
-</Filter></ApiFilter>
+      <Filter entryType="Namespace" fullName="System.ComponentModel" isExposed="True">
+        <Filter entryType="Class" fullName="System.ComponentModel.Component" filterName="Component" isExposed="False" />
+      </Filter>
+      <Filter entryType="Namespace" fullName="System.Windows.Forms" isExposed="True">
+        <Filter entryType="Class" fullName="System.Windows.Forms.ContainerControl" filterName="ContainerControl" isExposed="False" />
+        <Filter entryType="Class" fullName="System.Windows.Forms.Control" filterName="Control" isExposed="False" />
+        <Filter entryType="Class" fullName="System.Windows.Forms.Form" filterName="Form" isExposed="False" />
+        <Filter entryType="Class" fullName="System.Windows.Forms.ScrollableControl" filterName="ScrollableControl" isExposed="False" />
+      </Filter>
+    </ApiFilter>
     <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Privates, PrivateFields, Protected, ProtectedInternalAsProtected</VisibleItems>
     <MissingTags>Summary, Parameter, Returns, Value, AutoDocumentCtors, Namespace, TypeParameter, AutoDocumentDispose</MissingTags>
   </PropertyGroup>

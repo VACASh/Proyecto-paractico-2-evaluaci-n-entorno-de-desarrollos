@@ -155,7 +155,7 @@ namespace Numeros.Primos
         /// </summary>
         /// <param name="sender">Lanza el evento que carga pa larte visual del formulario</param>
         /// <param name="e">sin uso</param>
-        private void Form1_Load(object sender, EventArgs e)
+        private void formularioPrimosLoad(object sender, EventArgs e)
         {
 
         }

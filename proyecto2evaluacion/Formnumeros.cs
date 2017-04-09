@@ -29,10 +29,11 @@ namespace Numeros
         /// <summary>
         /// Botón que llama al objeto fibonnaci y accede al formulario
         /// </summary>
-        /// <param name="sender">Lanza el evento botón bFibo</param>
+        /// <param name="sender">Lanza el  botón bFibo</param>
         /// <param name="e">sin uso</param>
         private void bFibo(object sender, EventArgs e)
         {
+
             MessageBox.Show("Esta aplicacion calcula los números fibonacci desde el 0 hasta el número que insertas");
             Fibonacci.numFibonacci oFibo = new Fibonacci.numFibonacci();
             oFibo.ShowDialog();
@@ -45,7 +46,7 @@ namespace Numeros
         /// </summary>
         /// <param name="sender">Lanza el evento que carga el formulario</param>
         /// <param name="e">sin uso</param>
-        private void Form1_Load(object sender, EventArgs e)
+        private void forNumerosLoad(object sender, EventArgs e)
         {
 
         }
@@ -53,33 +54,38 @@ namespace Numeros
         /// <summary>
         /// Botón que llama al objeto primos y accede al formulario
         /// </summary>
-        /// <param name="sender">Lanza el evento del botón bPrimos</param>
+        /// <param name="sender">Lanza el  botón bPrimos</param>
         /// <param name="e">sin uso</param>
         private void bPrimos(object sender, EventArgs e)
         {
+
             MessageBox.Show("Este aplicacion te pide que ingreses números en una matriz y te dice cuales son primos y que posicion ocupan en la matriz");
             Primos.revisarPrimosMatriz oPrimos = new Primos.revisarPrimosMatriz();
             oPrimos.ShowDialog();
+
         }
 
         /// <summary>
         /// Botón que llama al formulario de las torres de hanoi
         /// </summary>
-        /// <param name="sender">lanza el evento del boton bTorresHanoi</param>
+        /// <param name="sender">lanza el  boton bTorresHanoi</param>
         /// <param name="e">sin uso</param>
         private void bTorresHanoi(object sender, EventArgs e)
         {
+
             MessageBox.Show("Esta aplicacion te pide que ingreses un números de discos para jugar a torres de hanoi y te te indica cuales son los movimientos que debes hacer");
-            Hanoi.toresHanoi oHanoi = new Hanoi.toresHanoi();
+            Hanoi.torresHanoi oHanoi = new Hanoi.torresHanoi();
             oHanoi.ShowDialog();
+
         }
         /// <summary>
         /// Botón que llama al formulario de loteria
         /// </summary>
-        /// <param name="sender">lanza el evento del botón bPrimitiva</param>
+        /// <param name="sender">lanza el   botón bPrimitiva</param>
         /// <param name="e">sin uso</param>
         private void bPrimitiva(object sender, EventArgs e)
         {
+
             MessageBox.Show("esta aplicacion te pide que ingreses números y hace un sorteo de primitiva y te dice los aciertos");
             Primitiva.jugarPrimitiva oPrimitiva = new Primitiva.jugarPrimitiva();
             oPrimitiva.ShowDialog();

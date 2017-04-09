@@ -28,93 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lFibonacci = new System.Windows.Forms.Label();
+            this.lTorresDeHanoiFormulario = new System.Windows.Forms.Label();
+            this.lNumerosPrimosFormulario = new System.Windows.Forms.Label();
+            this.lPrimitivaFormulario = new System.Windows.Forms.Label();
+            this.bPrimitivaFormulario = new System.Windows.Forms.Button();
+            this.bNumerosPrimosFormulario = new System.Windows.Forms.Button();
+            this.bTorresDeHanoiFormulario = new System.Windows.Forms.Button();
+            this.bFormularioFibonacci = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lFibonacci
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Fibonacci";
+            this.lFibonacci.AutoSize = true;
+            this.lFibonacci.Location = new System.Drawing.Point(61, 27);
+            this.lFibonacci.Name = "lFibonacci";
+            this.lFibonacci.Size = new System.Drawing.Size(53, 13);
+            this.lFibonacci.TabIndex = 4;
+            this.lFibonacci.Text = "Fibonacci";
             // 
-            // label2
+            // lTorresDeHanoiFormulario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(430, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Torres de Hanoi";
+            this.lTorresDeHanoiFormulario.AutoSize = true;
+            this.lTorresDeHanoiFormulario.Location = new System.Drawing.Point(430, 27);
+            this.lTorresDeHanoiFormulario.Name = "lTorresDeHanoiFormulario";
+            this.lTorresDeHanoiFormulario.Size = new System.Drawing.Size(83, 13);
+            this.lTorresDeHanoiFormulario.TabIndex = 5;
+            this.lTorresDeHanoiFormulario.Text = "Torres de Hanoi";
             // 
-            // label3
+            // lNumerosPrimosFormulario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 285);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Numeros primos";
+            this.lNumerosPrimosFormulario.AutoSize = true;
+            this.lNumerosPrimosFormulario.Location = new System.Drawing.Point(61, 285);
+            this.lNumerosPrimosFormulario.Name = "lNumerosPrimosFormulario";
+            this.lNumerosPrimosFormulario.Size = new System.Drawing.Size(82, 13);
+            this.lNumerosPrimosFormulario.TabIndex = 6;
+            this.lNumerosPrimosFormulario.Text = "Numeros primos";
             // 
-            // label4
+            // lPrimitivaFormulario
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(430, 285);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Primitiva";
+            this.lPrimitivaFormulario.AutoSize = true;
+            this.lPrimitivaFormulario.Location = new System.Drawing.Point(430, 285);
+            this.lPrimitivaFormulario.Name = "lPrimitivaFormulario";
+            this.lPrimitivaFormulario.Size = new System.Drawing.Size(46, 13);
+            this.lPrimitivaFormulario.TabIndex = 7;
+            this.lPrimitivaFormulario.Text = "Primitiva";
             // 
-            // button4
+            // bPrimitivaFormulario
             // 
-            this.button4.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.primitiva;
-            this.button4.Location = new System.Drawing.Point(433, 199);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 74);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.bPrimitiva);
+            this.bPrimitivaFormulario.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.primitiva;
+            this.bPrimitivaFormulario.Location = new System.Drawing.Point(433, 199);
+            this.bPrimitivaFormulario.Name = "bPrimitivaFormulario";
+            this.bPrimitivaFormulario.Size = new System.Drawing.Size(87, 74);
+            this.bPrimitivaFormulario.TabIndex = 3;
+            this.bPrimitivaFormulario.UseVisualStyleBackColor = true;
+            this.bPrimitivaFormulario.Click += new System.EventHandler(this.bPrimitiva);
             // 
-            // button3
+            // bNumerosPrimosFormulario
             // 
-            this.button3.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.primos;
-            this.button3.Location = new System.Drawing.Point(61, 199);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 74);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.bPrimos);
+            this.bNumerosPrimosFormulario.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.primos;
+            this.bNumerosPrimosFormulario.Location = new System.Drawing.Point(61, 199);
+            this.bNumerosPrimosFormulario.Name = "bNumerosPrimosFormulario";
+            this.bNumerosPrimosFormulario.Size = new System.Drawing.Size(87, 74);
+            this.bNumerosPrimosFormulario.TabIndex = 2;
+            this.bNumerosPrimosFormulario.UseVisualStyleBackColor = true;
+            this.bNumerosPrimosFormulario.Click += new System.EventHandler(this.bPrimos);
             // 
-            // button2
+            // bTorresDeHanoiFormulario
             // 
-            this.button2.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.hanoi;
-            this.button2.Location = new System.Drawing.Point(433, 61);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 74);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.bTorresHanoi);
+            this.bTorresDeHanoiFormulario.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.hanoi;
+            this.bTorresDeHanoiFormulario.Location = new System.Drawing.Point(433, 61);
+            this.bTorresDeHanoiFormulario.Name = "bTorresDeHanoiFormulario";
+            this.bTorresDeHanoiFormulario.Size = new System.Drawing.Size(87, 74);
+            this.bTorresDeHanoiFormulario.TabIndex = 1;
+            this.bTorresDeHanoiFormulario.UseVisualStyleBackColor = true;
+            this.bTorresDeHanoiFormulario.Click += new System.EventHandler(this.bTorresHanoi);
             // 
-            // button1
+            // bFormularioFibonacci
             // 
-            this.button1.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.fibonnaci1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button1.Location = new System.Drawing.Point(61, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 74);
-            this.button1.TabIndex = 0;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.bFibo);
+            this.bFormularioFibonacci.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.fibonnaci1;
+            this.bFormularioFibonacci.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.bFormularioFibonacci.Location = new System.Drawing.Point(61, 61);
+            this.bFormularioFibonacci.Name = "bFormularioFibonacci";
+            this.bFormularioFibonacci.Size = new System.Drawing.Size(87, 74);
+            this.bFormularioFibonacci.TabIndex = 0;
+            this.bFormularioFibonacci.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bFormularioFibonacci.UseVisualStyleBackColor = true;
+            this.bFormularioFibonacci.Click += new System.EventHandler(this.bFibo);
             // 
             // tNumeros
             // 
@@ -122,17 +122,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::proyecto2evaluacion.Properties.Resources.numeros;
             this.ClientSize = new System.Drawing.Size(601, 326);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lPrimitivaFormulario);
+            this.Controls.Add(this.lNumerosPrimosFormulario);
+            this.Controls.Add(this.lTorresDeHanoiFormulario);
+            this.Controls.Add(this.lFibonacci);
+            this.Controls.Add(this.bPrimitivaFormulario);
+            this.Controls.Add(this.bNumerosPrimosFormulario);
+            this.Controls.Add(this.bTorresDeHanoiFormulario);
+            this.Controls.Add(this.bFormularioFibonacci);
             this.Name = "tNumeros";
             this.Text = "fibonacci";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.forNumerosLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,14 +140,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button bFormularioFibonacci;
+        private System.Windows.Forms.Button bTorresDeHanoiFormulario;
+        private System.Windows.Forms.Button bNumerosPrimosFormulario;
+        private System.Windows.Forms.Button bPrimitivaFormulario;
+        private System.Windows.Forms.Label lFibonacci;
+        private System.Windows.Forms.Label lTorresDeHanoiFormulario;
+        private System.Windows.Forms.Label lNumerosPrimosFormulario;
+        private System.Windows.Forms.Label lPrimitivaFormulario;
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace Numeros.Hanoi
 {
-    partial class toresHanoi
+    partial class torresHanoi
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.bJugarTorres = new System.Windows.Forms.Button();
             this.introducirNumeros = new System.Windows.Forms.TextBox();
             this.labelMovimentos = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lNumeroDiscos = new System.Windows.Forms.Label();
             this.cajaMovimientos = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // bJugarTorres
             // 
-            this.button1.Location = new System.Drawing.Point(12, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Jugar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.bHanoi);
+            this.bJugarTorres.Location = new System.Drawing.Point(12, 18);
+            this.bJugarTorres.Name = "bJugarTorres";
+            this.bJugarTorres.Size = new System.Drawing.Size(75, 23);
+            this.bJugarTorres.TabIndex = 0;
+            this.bJugarTorres.Text = "Jugar";
+            this.bJugarTorres.UseVisualStyleBackColor = true;
+            this.bJugarTorres.Click += new System.EventHandler(this.bHanoi);
             // 
             // introducirNumeros
             // 
@@ -60,38 +60,38 @@
             this.labelMovimentos.Size = new System.Drawing.Size(0, 13);
             this.labelMovimentos.TabIndex = 2;
             // 
-            // label2
+            // lNumeroDiscos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(203, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Numeros de discos con los que juegas";
+            this.lNumeroDiscos.AutoSize = true;
+            this.lNumeroDiscos.Location = new System.Drawing.Point(203, 27);
+            this.lNumeroDiscos.Name = "lNumeroDiscos";
+            this.lNumeroDiscos.Size = new System.Drawing.Size(189, 13);
+            this.lNumeroDiscos.TabIndex = 3;
+            this.lNumeroDiscos.Text = "Numeros de discos con los que juegas";
             // 
-            // textBox1
+            // cajaMovimientos
             // 
             this.cajaMovimientos.Location = new System.Drawing.Point(26, 54);
             this.cajaMovimientos.Multiline = true;
-            this.cajaMovimientos.Name = "textBox1";
+            this.cajaMovimientos.Name = "cajaMovimientos";
             this.cajaMovimientos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.cajaMovimientos.Size = new System.Drawing.Size(400, 336);
             this.cajaMovimientos.TabIndex = 4;
-            this.cajaMovimientos.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.cajaMovimientos.TextChanged += new System.EventHandler(this.tTorresDeHanoiMovimientos_TextChanged);
             // 
-            // toresHanoi
+            // torresHanoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 413);
             this.Controls.Add(this.cajaMovimientos);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lNumeroDiscos);
             this.Controls.Add(this.labelMovimentos);
             this.Controls.Add(this.introducirNumeros);
-            this.Controls.Add(this.button1);
-            this.Name = "toresHanoi";
+            this.Controls.Add(this.bJugarTorres);
+            this.Name = "torresHanoi";
             this.Text = "Torres de Hanoi";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.formularioTorresDeHanoiLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,10 +99,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bJugarTorres;
         private System.Windows.Forms.TextBox introducirNumeros;
         private System.Windows.Forms.Label labelMovimentos;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lNumeroDiscos;
         private System.Windows.Forms.TextBox cajaMovimientos;
     }
 }

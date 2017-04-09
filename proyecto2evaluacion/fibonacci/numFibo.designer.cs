@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.bMostrar = new System.Windows.Forms.Button();
             this.tFibo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lFibonacci = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // bMostrar
             // 
-            this.button2.Location = new System.Drawing.Point(75, 162);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 70);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "mostrar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.bFibo);
+            this.bMostrar.Location = new System.Drawing.Point(75, 162);
+            this.bMostrar.Name = "bMostrar";
+            this.bMostrar.Size = new System.Drawing.Size(75, 70);
+            this.bMostrar.TabIndex = 0;
+            this.bMostrar.Text = "mostrar";
+            this.bMostrar.UseVisualStyleBackColor = true;
+            this.bMostrar.Click += new System.EventHandler(this.bFibo);
             // 
             // tFibo
             // 
@@ -51,22 +51,23 @@
             this.tFibo.TabIndex = 1;
             this.tFibo.TextChanged += new System.EventHandler(this.tFibo_TextChanged);
             // 
-            // label1
+            // lFibonacci
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Fibonacci";
+            this.lFibonacci.AutoSize = true;
+            this.lFibonacci.Location = new System.Drawing.Point(75, 13);
+            this.lFibonacci.Name = "lFibonacci";
+            this.lFibonacci.Size = new System.Drawing.Size(53, 13);
+            this.lFibonacci.TabIndex = 2;
+            this.lFibonacci.Text = "Fibonacci";
             // 
             // numFibonacci
             // 
             this.ClientSize = new System.Drawing.Size(465, 336);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lFibonacci);
             this.Controls.Add(this.tFibo);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bMostrar);
             this.Name = "numFibonacci";
+            this.Text = "Fibonacci";
             this.Load += new System.EventHandler(this.Formfibonacci_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -77,9 +78,9 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bMostrar;
         private System.Windows.Forms.TextBox tFibo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lFibonacci;
     }
 }
 

@@ -230,7 +230,7 @@ namespace Numeros.Primitiva
         /// este botón llama a un metodo para rellenar tu primitiva 
         /// </summary>
         /// <remarks>---</remarks>
-        /// <param name="sender">Lanza el evento del botón bRellenaTuPrimtiva</param>
+        /// <param name="sender">Llama al  botón bRellenaTuPrimtiva</param>
         /// <param name="e">sin uso</param>
         private void bRellenaTuPrimitiva(object sender, EventArgs e)
         {
@@ -244,7 +244,7 @@ namespace Numeros.Primitiva
         /// </summary>
         /// <param name="sender">lanza el evento que carga a la parte visual del formulario</param>
         /// <param name="e">sin uso</param>
-        private void Form1_Load(object sender, EventArgs e)
+        private void formularioPrimitivaLoad(object sender, EventArgs e)
         {
 
         }
