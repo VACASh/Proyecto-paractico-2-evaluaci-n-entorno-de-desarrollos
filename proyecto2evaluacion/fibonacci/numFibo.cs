@@ -113,5 +113,10 @@ namespace Numeros.Fibonacci
             
 
         }
+
+        private void tFibo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

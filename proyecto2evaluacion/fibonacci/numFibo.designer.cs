@@ -43,12 +43,13 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.bFibo);
             // 
-            // textBox2
+            // tFibo
             // 
             this.tFibo.Location = new System.Drawing.Point(75, 56);
-            this.tFibo.Name = "textBox2";
+            this.tFibo.Name = "tFibo";
             this.tFibo.Size = new System.Drawing.Size(75, 20);
             this.tFibo.TabIndex = 1;
+            this.tFibo.TextChanged += new System.EventHandler(this.tFibo_TextChanged);
             // 
             // label1
             // 
@@ -59,13 +60,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Fibonacci";
             // 
-            // Formfibonacci
+            // numFibonacci
             // 
             this.ClientSize = new System.Drawing.Size(465, 336);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tFibo);
             this.Controls.Add(this.button2);
-            this.Name = "Formfibonacci";
+            this.Name = "numFibonacci";
             this.Load += new System.EventHandler(this.Formfibonacci_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
