@@ -120,4 +120,7 @@
   <data name="insertarEntero" xml:space="preserve">
     <value>inserte un número entero o valido</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value>asd</value>
+  </data>
 </root>

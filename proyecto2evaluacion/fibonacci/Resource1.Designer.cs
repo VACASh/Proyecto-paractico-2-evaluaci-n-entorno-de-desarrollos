@@ -68,5 +68,14 @@ namespace proyecto2evaluacion.fibonacci {
                 return ResourceManager.GetString("insertarEntero", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a asd.
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
     }
 }
