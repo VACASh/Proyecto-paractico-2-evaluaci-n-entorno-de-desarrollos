@@ -20,12 +20,11 @@ namespace Numeros.Primitiva
     /// </summary>
     public partial class jugarPrimitiva : Form
     {
-        ArrayList arrayPrimitiva = new ArrayList();
-        ArrayList arrayJugar = new ArrayList();
+        PrimitivaLogica.LaPrimitivaLogica oPrimitiva = new PrimitivaLogica.LaPrimitivaLogica();
 
         const int kPrimitiva = 6;
 
-        Random randomLoteria = new Random();
+        int contadorDeNumeros = 0;
 
         /// <summary>
         /// Inputbox
@@ -51,162 +50,7 @@ namespace Numeros.Primitiva
             InitializeComponent();
         }
 
-        /// <summary>
-        /// comprueba que no metas un número repetido
-        /// </summary>
-        /// <remarks>en el omemto que lo encuentra no continua en el bucle </remarks>
-        /// <param name="listaComprobar">lista de comparación</param>
-        /// <param name="numeroComprobar">Número a comprobar</param>
-        /// <returns>devuelve true si el número esta repetido  false si no esta repetido</returns>
-        bool comprobarRepetido(ArrayList listaComprobar, int numeroComprobar)
-        {
 
-            int i = 0;
-            bool numEncontrado = false;
-
-            while(i < kPrimitiva && numEncontrado == false)
-            {
-                
-                if (listaComprobar.Contains(numeroComprobar))
-                {
-
-                    numEncontrado = true;
-                    MessageBox.Show("Inserte un número que no este repetido");
-
-                }
-                else
-                {    
-                           
-                    i++;
-
-                }
-
-            }
-
-            return numEncontrado;
-
-        }
-
-        /// <summary>
-        /// rellena el arraylist de los números que vas a jugar .
-        /// <remarks>ingresas los números por inputbox  llama al metodo comprobarrrepe para
-        /// que no ingreses números repetidos si esta repetido no avanzas y tienes que volver a ingresarlo</remarks>
-        /// </summary>
-        /// <param name="listaParaJugar">Lista en la que ingreas números</param>
-        void rellenarPrimitiva(ArrayList listaParaJugar)
-        {
-            
-            int i = 0;
-            while (i < kPrimitiva)
-            {
-
-                int num = int.Parse(InputBox("Introduzca número: "));
-
-                if (num < 50 && num > 0)
-                {
-                
-                    if (comprobarRepetido(listaParaJugar, num))
-                    {
-
-                        MessageBox.Show("esta repetido");
-
-                    }
-                    else
-                    {
-
-                        listaParaJugar.Add(num);
-                        i++;
-
-                    }
-
-                }
-                else
-                {
-
-                    MessageBox.Show("El número tiene que estar entre 1 y 49");
-
-                }
-                
-            }
-
-        }
-
-        /// <summary>
-        /// Lista donde se ingresan números premiados de forma aleatoria.
-        /// </summary>
-        /// <remarks>Los números son random pero solo estan comprendidos entre el 0 y el 49</remarks>
-        /// <param name="listaPremiados">Lista donde ingresas números premiados</param>
-        void rellenarPremiado(ArrayList listaPremiados)
-        {
-            
-            int i = 0;
-
-            while (i < kPrimitiva)
-            {
-
-                int numRandom = randomLoteria.Next(49);
-
-                if (comprobarRepetido(listaPremiados, numRandom))
-                {
-
-                    MessageBox.Show("esta repetido");
-
-                }
-                else
-                {
-
-                    listaPremiados.Add(numRandom);
-                    i++;
-
-                }
-
-
-            }
-        }
-
-        /// <summary>
-        /// String donde compara la lista de jeugos con la lista premiada y va añadiendo el número de aciertos
-        /// </summary>
-        /// <remarks>Si haciertas todos te dice que has ganado, si no te dice los números que has acertado.
-        /// en el caso de que no aciertes nada tambien te devolvera que no has acertado ninguno </remarks>
-        /// <param name="listaPremiada">Lista de números premiados</param>
-        /// <param name="ListaDondeJuegas">Lista de números que juegas</param>
-        /// <returns>Devuelve el string con lo que has acertado </returns>
-        string textoLoteria(ArrayList listaPremiada, ArrayList ListaDondeJuegas)
-        {
-            string textoAciertos = "has acertado: \n ";
-            int numContador = 0;
-
-            for (int i = 0; i < listaPremiada.Count; i++)
-            {
-
-                if (listaPremiada.Contains(ListaDondeJuegas[i]))
-                {
-
-                    numContador++;
-                    textoAciertos = textoAciertos + listaPremiada[i] + ",";
-
-                }
-
-            }
-
-            if (numContador == 0)
-            {
-
-                textoAciertos = "No has acertado ninguno";
-
-            }
-
-            if (numContador == 6)
-            {
-
-                textoAciertos = "Has acertado todas YOU WIN!!!";
-
-            }
-
-            return textoAciertos;
-
-        }
 
 
         /// <summary>
@@ -217,13 +61,13 @@ namespace Numeros.Primitiva
         /// <param name="e">sin uso</param>
         private void bMuestraPremio(object sender, EventArgs e)
         {
-            
-            rellenarPremiado(arrayJugar);
+            oPrimitiva.borrarLista();
+            oPrimitiva.rellenarPremiado();
 
-            string textoMostrar = textoLoteria(arrayPrimitiva, arrayJugar);
+            string textoMostrar = oPrimitiva.textoLoteria();
 
             MessageBox.Show(textoMostrar);
-            
+
         }
 
         /// <summary>
@@ -235,8 +79,45 @@ namespace Numeros.Primitiva
         private void bRellenaTuPrimitiva(object sender, EventArgs e)
         {
             
-            rellenarPrimitiva(arrayPrimitiva);
-            
+            int numeroIngresas = -1;
+
+            if (contadorDeNumeros < kPrimitiva)
+            {
+
+                if (int.TryParse(tRellenarPrimitiva.Text, out numeroIngresas) && numeroIngresas > 0
+                    && numeroIngresas < 50)
+                {
+                    MessageBox.Show(oPrimitiva.rellenarPrimitiva(numeroIngresas));
+
+                    tRellenarPrimitiva.Text = null;
+
+                    bRellenarPrimitiva.Enabled = false;
+
+                    contadorDeNumeros++;
+                }
+                else
+                {
+                    MessageBox.Show("Inserte un valor valido");
+
+                }
+
+            }
+
+            if(contadorDeNumeros==6)
+            {
+                MessageBox.Show("ya has ingresado todos los números");
+
+                tRellenarPrimitiva.Enabled = false;
+
+                bRellenarPrimitiva.Enabled = false;
+
+                bProbarSuerte.Enabled = true;
+
+            }
+
+
+
+
         }
 
         /// <summary>
@@ -247,6 +128,20 @@ namespace Numeros.Primitiva
         private void formularioPrimitivaLoad(object sender, EventArgs e)
         {
 
+        }
+
+        private void tRellenarPrimitiva_TextChanged(object sender, EventArgs e)
+        {
+            string comprobarVacio = tRellenarPrimitiva.Text;
+
+            if (!string.IsNullOrEmpty(comprobarVacio))
+            {
+
+                bRellenarPrimitiva.Enabled = true;
+
+            }
+
+            tRellenarPrimitiva.MaxLength = 2;
         }
     }
 }

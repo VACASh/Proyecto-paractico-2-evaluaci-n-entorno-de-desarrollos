@@ -87,6 +87,7 @@
     <Compile Include="La primitiva\laPrimitiva.designer.cs">
       <DependentUpon>laPrimitiva.cs</DependentUpon>
     </Compile>
+    <Compile Include="La primitiva\LaPrimitivaLogica.cs" />
     <Compile Include="Números primos\Primos.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace proyecto2evaluacion.fibonacci {
+namespace Numeros.fibonacci {
     using System;
     
     

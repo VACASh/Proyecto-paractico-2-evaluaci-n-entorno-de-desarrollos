@@ -28,23 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bRellenarFormulario = new System.Windows.Forms.Button();
+            this.bRellenarPrimitiva = new System.Windows.Forms.Button();
             this.bProbarSuerte = new System.Windows.Forms.Button();
+            this.tRellenarPrimitiva = new System.Windows.Forms.TextBox();
+            this.ingresarNumerosQueJuegas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // bRellenarFormulario
+            // bRellenarPrimitiva
             // 
-            this.bRellenarFormulario.Location = new System.Drawing.Point(45, 224);
-            this.bRellenarFormulario.Name = "bRellenarFormulario";
-            this.bRellenarFormulario.Size = new System.Drawing.Size(83, 59);
-            this.bRellenarFormulario.TabIndex = 0;
-            this.bRellenarFormulario.Text = "rellenar primitiva";
-            this.bRellenarFormulario.UseVisualStyleBackColor = true;
-            this.bRellenarFormulario.Click += new System.EventHandler(this.bRellenaTuPrimitiva);
+            this.bRellenarPrimitiva.Enabled = false;
+            this.bRellenarPrimitiva.Location = new System.Drawing.Point(300, 97);
+            this.bRellenarPrimitiva.Name = "bRellenarPrimitiva";
+            this.bRellenarPrimitiva.Size = new System.Drawing.Size(115, 20);
+            this.bRellenarPrimitiva.TabIndex = 0;
+            this.bRellenarPrimitiva.Text = "rellenar primitiva";
+            this.bRellenarPrimitiva.UseVisualStyleBackColor = true;
+            this.bRellenarPrimitiva.Click += new System.EventHandler(this.bRellenaTuPrimitiva);
             // 
             // bProbarSuerte
             // 
-            this.bProbarSuerte.Location = new System.Drawing.Point(230, 224);
+            this.bProbarSuerte.Enabled = false;
+            this.bProbarSuerte.Location = new System.Drawing.Point(47, 230);
             this.bProbarSuerte.Name = "bProbarSuerte";
             this.bProbarSuerte.Size = new System.Drawing.Size(83, 59);
             this.bProbarSuerte.TabIndex = 1;
@@ -52,24 +56,46 @@
             this.bProbarSuerte.UseVisualStyleBackColor = true;
             this.bProbarSuerte.Click += new System.EventHandler(this.bMuestraPremio);
             // 
+            // tRellenarPrimitiva
+            // 
+            this.tRellenarPrimitiva.Location = new System.Drawing.Point(239, 97);
+            this.tRellenarPrimitiva.Name = "tRellenarPrimitiva";
+            this.tRellenarPrimitiva.Size = new System.Drawing.Size(37, 20);
+            this.tRellenarPrimitiva.TabIndex = 2;
+            this.tRellenarPrimitiva.TextChanged += new System.EventHandler(this.tRellenarPrimitiva_TextChanged);
+            // 
+            // ingresarNumerosQueJuegas
+            // 
+            this.ingresarNumerosQueJuegas.AutoSize = true;
+            this.ingresarNumerosQueJuegas.Location = new System.Drawing.Point(7, 100);
+            this.ingresarNumerosQueJuegas.Name = "ingresarNumerosQueJuegas";
+            this.ingresarNumerosQueJuegas.Size = new System.Drawing.Size(226, 13);
+            this.ingresarNumerosQueJuegas.TabIndex = 3;
+            this.ingresarNumerosQueJuegas.Text = "Ves ingresnado los números que quieres jugar:";
+            // 
             // jugarPrimitiva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 333);
+            this.Controls.Add(this.ingresarNumerosQueJuegas);
+            this.Controls.Add(this.tRellenarPrimitiva);
             this.Controls.Add(this.bProbarSuerte);
-            this.Controls.Add(this.bRellenarFormulario);
+            this.Controls.Add(this.bRellenarPrimitiva);
             this.Name = "jugarPrimitiva";
             this.Text = "jugarPrimitiva";
             this.Load += new System.EventHandler(this.formularioPrimitivaLoad);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button bRellenarFormulario;
+        private System.Windows.Forms.Button bRellenarPrimitiva;
         private System.Windows.Forms.Button bProbarSuerte;
+        private System.Windows.Forms.TextBox tRellenarPrimitiva;
+        private System.Windows.Forms.Label ingresarNumerosQueJuegas;
     }
 }
 
