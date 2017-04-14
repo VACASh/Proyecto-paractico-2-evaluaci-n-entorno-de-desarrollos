@@ -35,7 +35,7 @@
             // 
             // bMostrar
             // 
-            this.bMostrar.Location = new System.Drawing.Point(75, 162);
+            this.bMostrar.Location = new System.Drawing.Point(165, 167);
             this.bMostrar.Name = "bMostrar";
             this.bMostrar.Size = new System.Drawing.Size(75, 70);
             this.bMostrar.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // tFibo
             // 
-            this.tFibo.Location = new System.Drawing.Point(75, 56);
+            this.tFibo.Location = new System.Drawing.Point(165, 39);
             this.tFibo.Name = "tFibo";
             this.tFibo.Size = new System.Drawing.Size(75, 20);
             this.tFibo.TabIndex = 1;
@@ -54,7 +54,7 @@
             // lFibonacci
             // 
             this.lFibonacci.AutoSize = true;
-            this.lFibonacci.Location = new System.Drawing.Point(75, 13);
+            this.lFibonacci.Location = new System.Drawing.Point(32, 39);
             this.lFibonacci.Name = "lFibonacci";
             this.lFibonacci.Size = new System.Drawing.Size(53, 13);
             this.lFibonacci.TabIndex = 2;
@@ -76,8 +76,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+       
+        
         private System.Windows.Forms.Button bMostrar;
         private System.Windows.Forms.TextBox tFibo;
         private System.Windows.Forms.Label lFibonacci;

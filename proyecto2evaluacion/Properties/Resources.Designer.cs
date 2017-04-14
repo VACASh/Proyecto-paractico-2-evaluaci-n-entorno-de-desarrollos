@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace proyecto2evaluacion.Properties {
+namespace NumerosFibo.Properties {
     using System;
     
     

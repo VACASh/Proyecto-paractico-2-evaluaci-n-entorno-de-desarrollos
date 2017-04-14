@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Resources;
 
 /// <summary>
 /// espacio de nombres de la clase torres de hanoi
@@ -74,6 +75,7 @@ namespace Numeros.Hanoi
             }
             else
             {
+                //ResourceManager.CreateFileBasedResourceManager( introducenumero, Resource1, Type);
                 MessageBox.Show("Inserte un número entero el resto de parámetros son inválidos");
             }
 

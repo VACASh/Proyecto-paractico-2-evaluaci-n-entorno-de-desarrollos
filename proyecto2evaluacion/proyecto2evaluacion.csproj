@@ -38,6 +38,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\proyecto2evaluacion.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>ExtendedCorrectnessRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -62,11 +63,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fibonacci\numerosFibonacciLogica.cs" />
     <Compile Include="fibonacci\numFibo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fibonacci\numFibo.designer.cs">
       <DependentUpon>numFibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fibonacci\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="Formnumeros.cs">
       <SubType>Form</SubType>
@@ -100,6 +107,10 @@
     <EmbeddedResource Include="fibonacci\numFibo.resx">
       <DependentUpon>numFibo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fibonacci\Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formnumeros.resx">
       <DependentUpon>Formnumeros.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +133,7 @@
     <EmbeddedResource Include="Torres de Hanoi\torresDeHanoi.resx">
       <DependentUpon>torresDeHanoi.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="documentacion\Documentacion del proyecto 3 evaluacion.docx" />
     <None Include="documentacion\proyecto practico 2 evalacuión.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,7 +166,9 @@
   <ItemGroup>
     <None Include="Resources\primitiva.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\numeros.jpg" />
   </ItemGroup>
