@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+/// <summary>
+/// espacio de nombres  de la clase primos
+/// </summary>
 namespace Numeros.Primos
 {
     /// <summary>
@@ -19,93 +21,19 @@ namespace Numeros.Primos
     {
 
         //num de filas y columnas 
-        const int kFilas = 5;
-        const int kCol = 6;
+        const int kFilas = 2;
+        const int kCol = 2;
 
         int[,] matrizPrimos = new int[kFilas, kCol];
 
-       
+        //los enteros de las matriz
+        int numeroMatriz00 = -1;
+        int numeroMatriz10 = -1;
+        int numeroMatriz01 = -1;
+        int numeroMatriz11 = -1;
 
-        /// <summary>
-        /// Compueba si es primo  devuelve true si es primo false si no lo es.
-        /// En el momento que lo encuentra se sale fuera y devulve true en ese caso.
-        /// </summary>
-        /// <remarks>cuando llega a la mitad del número ya comprueba todas las posibilidades de 
-        /// que sea primo</remarks>
-        /// <param name="numRecibido">El numero que se le pasa para comprobar si es primo</param>
-        /// <returns>Devuelve booleano si es primo devuelve true si no es primo devuelve false</returns>
-        bool esPrimo(int numRecibido)
-        {
 
-            bool buscarPrimo = true;
 
-            for (int i = 2; i <= numRecibido/2 &&  buscarPrimo; i++)
-            {
-
-                if (numRecibido%i==0)
-                {
-
-                    buscarPrimo = false;
-
-                }
-
-            }
-
-            return buscarPrimo;
-
-        }
-
-        /// <summary>
-        /// Va ingresando números a la matriz  y rellenandola
-        /// </summary>
-        /// <param name="culaqueirMatriz">matriz donde ingresas números </param>
-        void ingresarMatriz(int [,] culaqueirMatriz)
-        {
-            
-            for (int i = 0; i < culaqueirMatriz.GetLength(0); i++)
-            {
-
-                for (int j = 0; j < culaqueirMatriz.GetLength(1); j++)
-                {
-
-                    //culaqueirMatriz[i, j] = int.Parse(InputBox("Elemento[" + i + ", " + j + "]"));
-
-                }
-
-            }
-
-        }
-
-        /// <summary>
-        /// Almacena los números primos dentro de la matriz en un string 
-        /// </summary>
-        /// <param name="cualquierMatrizComprobar">Matriz de números</param>
-        /// <returns>Devuelve string con los números primos</returns>
-        string comprobarMatriz(int[,] cualquierMatrizComprobar)
-        {
-
-            string textoMatrices = "Los números primos dentro de la matriz son: \n";
-
-            for (int i = 0; i < cualquierMatrizComprobar.GetLength(0); i++)
-            {
-
-                for (int j = 0; j < cualquierMatrizComprobar.GetLength(1); j++)
-                {
-
-                    if (esPrimo(cualquierMatrizComprobar[i, j]))
-                    {
-
-                        textoMatrices = textoMatrices + "de la posicion " + i + "," + j +   "el valor: " +cualquierMatrizComprobar[i, j] + "\n";
-
-                    }
-
-                 }
-
-            }
-
-            return textoMatrices;      
-
-        }
 
         /// <summary>
         /// inicializa formulario
@@ -125,8 +53,13 @@ namespace Numeros.Primos
         private void bPrimos(object sender, EventArgs e)
         {
 
-            ingresarMatriz(matrizPrimos);
-            string texto = comprobarMatriz(matrizPrimos);
+
+            matrizPrimos[0, 0] = int.Parse(tMatriz00.Text);
+            matrizPrimos[0, 1] = int.Parse(tMatriz01.Text);
+            matrizPrimos[1, 0] = int.Parse(tMatriz10.Text);
+            matrizPrimos[1, 1] = int.Parse(tMatriz11.Text);
+
+            string texto = PrimosLogica.numerosPrimosLogica.comprobarMatriz(matrizPrimos);
 
             MessageBox.Show(texto);
 
@@ -140,6 +73,55 @@ namespace Numeros.Primos
         private void formularioPrimosLoad(object sender, EventArgs e)
         {
 
+        }
+        /// <summary>
+        /// Text change con las condiciones que no esten vacias y limitando el tamaño del texto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tMatriz00_TextChanged(object sender, EventArgs e)
+        {
+            //Pasan todos los números de la matriz por el try parse para que se pueda activar el boton
+            if (int.TryParse(tMatriz00.Text, out numeroMatriz00) && int.TryParse(tMatriz10.Text, out numeroMatriz10)
+                && int.TryParse(tMatriz01.Text, out numeroMatriz01) && int.TryParse(tMatriz11.Text, out numeroMatriz11)
+
+                //uso la condicion de que los números no sean menor de 0 ni mayor que el maxvalue para controlar el boton
+
+                && numeroMatriz00 > 0 && numeroMatriz00 < int.MaxValue && numeroMatriz10 > 0
+                && numeroMatriz10 < int.MaxValue && numeroMatriz01 > 0 && numeroMatriz01 < int.MaxValue
+                && numeroMatriz11 > 0 && numeroMatriz11 < int.MaxValue)
+            {
+                
+                bIngresarNumeros.Enabled = true;
+
+            }
+            else
+            {
+
+                bIngresarNumeros.Enabled = false;
+
+                //Si todos estan con algo en el textbox comprueba que sean caracteres validos
+                if (tMatriz00.Text != "" && tMatriz01.Text != "" && tMatriz10.Text != "" && tMatriz11.Text != "")
+                {
+                    if (tMatriz00.Text != "" || tMatriz01.Text != "" || tMatriz10.Text != "" || tMatriz11.Text != "")
+                    {
+
+                        MessageBox.Show("Para jugar solo puede ser un número entre 1 y maxvalue, no validos otros valores");
+
+                        tMatriz00.Text = "";
+                        tMatriz01.Text = "";
+                        tMatriz10.Text = "";
+                        tMatriz11.Text = "";
+
+                    }
+
+                }
+            }
+
+            tMatriz00.MaxLength = 10;
+            tMatriz01.MaxLength = 10;
+            tMatriz10.MaxLength = 10;
+            tMatriz11.MaxLength = 10;
         }
     }
 }

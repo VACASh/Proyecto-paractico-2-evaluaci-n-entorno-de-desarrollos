@@ -33,10 +33,12 @@
             this.labelMovimentos = new System.Windows.Forms.Label();
             this.lNumeroDiscos = new System.Windows.Forms.Label();
             this.cajaMovimientos = new System.Windows.Forms.TextBox();
+            this.lMinimoMaximo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bJugarTorres
             // 
+            this.bJugarTorres.Enabled = false;
             this.bJugarTorres.Location = new System.Drawing.Point(12, 18);
             this.bJugarTorres.Name = "bJugarTorres";
             this.bJugarTorres.Size = new System.Drawing.Size(75, 23);
@@ -51,6 +53,7 @@
             this.introducirNumeros.Name = "introducirNumeros";
             this.introducirNumeros.Size = new System.Drawing.Size(49, 20);
             this.introducirNumeros.TabIndex = 1;
+            this.introducirNumeros.TextChanged += new System.EventHandler(this.introducirNumeros_TextChanged);
             // 
             // labelMovimentos
             // 
@@ -63,7 +66,7 @@
             // lNumeroDiscos
             // 
             this.lNumeroDiscos.AutoSize = true;
-            this.lNumeroDiscos.Location = new System.Drawing.Point(203, 27);
+            this.lNumeroDiscos.Location = new System.Drawing.Point(205, 18);
             this.lNumeroDiscos.Name = "lNumeroDiscos";
             this.lNumeroDiscos.Size = new System.Drawing.Size(189, 13);
             this.lNumeroDiscos.TabIndex = 3;
@@ -79,11 +82,21 @@
             this.cajaMovimientos.TabIndex = 4;
             this.cajaMovimientos.TextChanged += new System.EventHandler(this.tTorresDeHanoiMovimientos_TextChanged);
             // 
+            // lMinimoMaximo
+            // 
+            this.lMinimoMaximo.AutoSize = true;
+            this.lMinimoMaximo.Location = new System.Drawing.Point(208, 35);
+            this.lMinimoMaximo.Name = "lMinimoMaximo";
+            this.lMinimoMaximo.Size = new System.Drawing.Size(103, 13);
+            this.lMinimoMaximo.TabIndex = 5;
+            this.lMinimoMaximo.Text = "Minimo 1 , Máximo 9";
+            // 
             // torresHanoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 413);
+            this.Controls.Add(this.lMinimoMaximo);
             this.Controls.Add(this.cajaMovimientos);
             this.Controls.Add(this.lNumeroDiscos);
             this.Controls.Add(this.labelMovimentos);
@@ -104,6 +117,7 @@
         private System.Windows.Forms.Label labelMovimentos;
         private System.Windows.Forms.Label lNumeroDiscos;
         private System.Windows.Forms.TextBox cajaMovimientos;
+        private System.Windows.Forms.Label lMinimoMaximo;
     }
 }
 

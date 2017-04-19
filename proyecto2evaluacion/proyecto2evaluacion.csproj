@@ -88,6 +88,7 @@
       <DependentUpon>laPrimitiva.cs</DependentUpon>
     </Compile>
     <Compile Include="La primitiva\LaPrimitivaLogica.cs" />
+    <Compile Include="Números primos\numerosPrimosLogica.cs" />
     <Compile Include="Números primos\Primos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +103,7 @@
     <Compile Include="Torres de Hanoi\torresDeHanoi.designer.cs">
       <DependentUpon>torresDeHanoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Torres de Hanoi\torresDeHanoiLogica.cs" />
     <EmbeddedResource Include="fibonacci\numFibo.resx">
       <DependentUpon>numFibo.cs</DependentUpon>
     </EmbeddedResource>

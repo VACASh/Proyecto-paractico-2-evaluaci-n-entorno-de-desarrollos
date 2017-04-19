@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
 
+/// <summary>
+/// espacio de nombres de la clase torres de hanoi
+/// </summary>
 namespace Numeros.Hanoi
 {
     /// <summary>
@@ -18,31 +21,10 @@ namespace Numeros.Hanoi
     /// </summary>
     public partial class torresHanoi : Form
     {
-        /// <summary>
-        /// Torres de hanoi recursivo donde se le pasa el número de discos y te dice que movimientos deberias hacer para completarlo
-        /// </summary>
-        /// <remarks>Forma recursiva para poder hacerlo, importante el orden de las variables. Cuando llega a 0 
-        /// para y devuelve el texto</remarks>
-        /// <param name="numDiscos">El número de disco que juegan</param>
-        /// <param name="discOrigen">El origen de donde salen los dicos</param>
-        /// <param name="discDestino">El destino de donde tienen que llegar los discos</param>
-        /// <param name="discAux">El auxiliar del juego</param>
-        /// <param name="textoMovimientos">Almacenador de movimientos</param>
-        void torresDeHanoi(int numDiscos, string discOrigen, string discDestino,string discAux, ref string textoMovimientos)
-        {
 
-            if (numDiscos > 0)
-            {
+        int numDiscos = 0;
 
-                //orden de variables importante no modificar
-                torresDeHanoi(numDiscos - 1, discOrigen, discAux, discDestino, ref textoMovimientos);
-                textoMovimientos = textoMovimientos + "Muevo el disco " + numDiscos + " de " + discOrigen + " a "  + discDestino + "\n";
-                torresDeHanoi(numDiscos - 1, discAux, discDestino, discOrigen, ref textoMovimientos);
-
-            }
-            
-        }
-
+        
         /// <summary>
         /// inicializa componentes
         /// </summary>
@@ -61,22 +43,17 @@ namespace Numeros.Hanoi
         private void bHanoi(object sender, EventArgs e)
         {
 
-            int numDiscos =0;
             string textoMovimentos = "";
-           
 
-            if (int.TryParse(introducirNumeros.Text, out numDiscos))
-            {
-                torresDeHanoi(numDiscos, "origen", "destino", "auxiliar", ref textoMovimentos);
-                cajaMovimientos.Text = textoMovimentos;
-            }
-            else
-            {
-                //ResourceManager.CreateFileBasedResourceManager( introducenumero, Resource1, Type);
-                MessageBox.Show("Inserte un número entero el resto de parámetros son inválidos");
-            }
+            TorresHanoi.torresDeHanoiLogica oTorres = new TorresHanoi.torresDeHanoiLogica();
 
-           
+            numDiscos = int.Parse(introducirNumeros.Text);
+
+            oTorres.torresDeHanoi(numDiscos, "Origen", "Destino", "Auxiliar", ref textoMovimentos);
+
+            cajaMovimientos.Text = textoMovimentos;
+            int maxString = textoMovimentos.Length;
+            MessageBox.Show("hola "+maxString);
 
         }
 
@@ -97,6 +74,42 @@ namespace Numeros.Hanoi
         /// <param name="e">sin uso</param>
         private void tTorresDeHanoiMovimientos_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+        /// <summary>
+        /// Este textchange controla que solo puedan ser números entre 0 y 9 y no acepta 
+        /// otros caracteres 
+        /// </summary>
+        /// <remarks>Activa el boton si los datos son los deseados de lo contrario lo desactiva </remarks>
+        /// <param name="sender">Llama al textchange de introducir números</param>
+        /// <param name="e"></param>
+        private void introducirNumeros_TextChanged(object sender, EventArgs e)
+        {
+
+            if (int.TryParse(introducirNumeros.Text, out numDiscos) && numDiscos > 0 && numDiscos < 10)
+            {
+
+                bJugarTorres.Enabled = true;
+
+            }
+            else
+            {
+
+                bJugarTorres.Enabled = false;
+
+                if (introducirNumeros.Text != "")
+                {
+                    MessageBox.Show("Para jugar solo puede ser un número entre 1 y 9");
+
+                    introducirNumeros.Text = "";
+
+                }
+              
+                
+
+            }
+
+            introducirNumeros.MaxLength = 1;
 
         }
     }
