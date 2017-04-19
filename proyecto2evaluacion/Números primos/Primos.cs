@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/// <summary>
-/// espacio de nombres  de la clase primos
-/// </summary>
+
 namespace Numeros.Primos
 {
     /// <summary>
@@ -26,23 +24,7 @@ namespace Numeros.Primos
 
         int[,] matrizPrimos = new int[kFilas, kCol];
 
-        /// <summary>
-        /// Objeto de texto que usamos para ingresar números
-        /// </summary>
-        /// <param name="texto">Texto a ingresar </param>
-        /// <returns>devuelve el valor que se le ingresa</returns>
-        private static string InputBox(string texto)
-        {
-
-            InputBoxDialog ib = new InputBoxDialog();
-            ib.FormPrompt = texto;
-            ib.DefaultValue = "";
-            ib.ShowDialog();
-            string s = ib.InputResponse;
-            ib.Close();
-            return s;
-
-        }
+       
 
         /// <summary>
         /// Compueba si es primo  devuelve true si es primo false si no lo es.
@@ -86,7 +68,7 @@ namespace Numeros.Primos
                 for (int j = 0; j < culaqueirMatriz.GetLength(1); j++)
                 {
 
-                    culaqueirMatriz[i, j] = int.Parse(InputBox("Elemento[" + i + ", " + j + "]"));
+                    //culaqueirMatriz[i, j] = int.Parse(InputBox("Elemento[" + i + ", " + j + "]"));
 
                 }
 

@@ -67,7 +67,7 @@ namespace Numeros.Fibonacci
                 if (numIntroducido > 0)
                 {
 
-                    string textoFibo = NumerosFibo.numerosFibonacciLogica.textFibo(numIntroducido);
+                    string textoFibo =Fibologica.numerosFibonacciLogica.textFibo(numIntroducido);
 
                     MessageBox.Show(textoFibo);
 
@@ -103,7 +103,11 @@ namespace Numeros.Fibonacci
 
 
         }
-
+        /// <summary>
+        /// Usado para limitar el tamaño a 10 caracteres
+        /// </summary>
+        /// <param name="sender">Lanza el textchange del formulario </param>
+        /// <param name="e">Sin uso</param>
         private void tFibo_TextChanged(object sender, EventArgs e)
         {
             //limitado el texto a 10 para que no puedas pasarse del maxvalue

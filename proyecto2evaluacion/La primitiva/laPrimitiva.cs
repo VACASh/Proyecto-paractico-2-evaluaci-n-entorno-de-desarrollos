@@ -9,9 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 
-/// <summary>
-/// Espacio de nombres de la clase primitiva
-/// </summary>
+
 namespace Numeros.Primitiva
 {
     /// <summary>
@@ -26,21 +24,7 @@ namespace Numeros.Primitiva
 
         int contadorDeNumeros = 0;
 
-        /// <summary>
-        /// Inputbox
-        /// </summary>
-        /// <param name="texto">texto de entrada</param>
-        /// <returns></returns>
-        private static string InputBox(string texto)
-        {
-            InputBoxDialog ib = new InputBoxDialog();
-            ib.FormPrompt = texto;
-            ib.DefaultValue = "";
-            ib.ShowDialog();
-            string s = ib.InputResponse;
-            ib.Close();
-            return s;
-        }
+     
 
         /// <summary>
         /// inicializa componentes

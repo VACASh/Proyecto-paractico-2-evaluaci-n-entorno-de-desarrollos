@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NumerosFibo.Properties {
+namespace NumerosNumerosFibo.Properties {
     using System;
     
     

@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/// <summary>
-/// espacio de nombres de la clase números
-/// </summary>
+
 namespace Numeros
 {
     /// <summary>

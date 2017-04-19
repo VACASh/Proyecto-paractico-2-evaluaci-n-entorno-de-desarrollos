@@ -9,9 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
 
-/// <summary>
-/// espacio de nombres de la clase torres de hanoi
-/// </summary>
 namespace Numeros.Hanoi
 {
     /// <summary>
