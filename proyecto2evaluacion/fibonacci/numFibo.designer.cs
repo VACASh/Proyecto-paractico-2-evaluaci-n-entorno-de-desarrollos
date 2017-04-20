@@ -35,6 +35,7 @@
             // 
             // bMostrar
             // 
+            this.bMostrar.Enabled = false;
             this.bMostrar.Location = new System.Drawing.Point(165, 167);
             this.bMostrar.Name = "bMostrar";
             this.bMostrar.Size = new System.Drawing.Size(75, 70);

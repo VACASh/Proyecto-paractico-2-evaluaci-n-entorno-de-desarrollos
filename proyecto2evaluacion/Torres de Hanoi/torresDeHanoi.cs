@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
+using System.Reflection;
+using System.Globalization;
 
-/// <summary>
-/// espacio de nombres de la clase torres de hanoi
-/// </summary>
+
+
 namespace Numeros.Hanoi
 {
     /// <summary>
@@ -24,7 +25,8 @@ namespace Numeros.Hanoi
 
         int numDiscos = 0;
 
-        
+        ResourceManager manejoTexto;
+
         /// <summary>
         /// inicializa componentes
         /// </summary>
@@ -45,15 +47,14 @@ namespace Numeros.Hanoi
 
             string textoMovimentos = "";
 
-            TorresHanoi.torresDeHanoiLogica oTorres = new TorresHanoi.torresDeHanoiLogica();
+            Hanoi.torresDeHanoiLogica oTorres = new Hanoi.torresDeHanoiLogica();
 
             numDiscos = int.Parse(introducirNumeros.Text);
 
             oTorres.torresDeHanoi(numDiscos, "Origen", "Destino", "Auxiliar", ref textoMovimentos);
 
             cajaMovimientos.Text = textoMovimentos;
-            int maxString = textoMovimentos.Length;
-            MessageBox.Show("hola "+maxString);
+
 
         }
 
@@ -65,16 +66,20 @@ namespace Numeros.Hanoi
         /// <param name="e">sin uso</param>
         private void formularioTorresDeHanoiLoad(object sender, EventArgs e)
         {
+           // string manejandoTexto = proyecto2evaluacion.Properties.Resources.stringHanoi;
+           // manejoTexto = new ResourceManager("es-ES", Assembly.GetExecutingAssembly());
+            //solucionar
+            //lMinimoMaximo.Text = manejoTexto.GetString(manejoTexto);
 
         }
         /// <summary>
-        /// textbox donde se almacena el texto
+        /// textxchanged  del texto de los movimientos de torres de hanoi
         /// </summary>
-        /// <param name="sender">Lanza el  textbox donde almacena movimientos</param>
+        /// <param name="sender">Lanza el  textchanged del textvox donde almacena movimientos</param>
         /// <param name="e">sin uso</param>
         private void tTorresDeHanoiMovimientos_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
         /// <summary>
         /// Este textchange controla que solo puedan ser números entre 0 y 9 y no acepta 
@@ -97,20 +102,28 @@ namespace Numeros.Hanoi
 
                 bJugarTorres.Enabled = false;
 
-                if (introducirNumeros.Text != "")
+                if (!string.IsNullOrEmpty(introducirNumeros.Text))
                 {
                     MessageBox.Show("Para jugar solo puede ser un número entre 1 y 9");
 
-                    introducirNumeros.Text = "";
+                    introducirNumeros.Text = null;
 
                 }
-              
-                
 
             }
 
             introducirNumeros.MaxLength = 1;
 
+        }
+
+        private void lNumeroDiscos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lMinimoMaximo_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

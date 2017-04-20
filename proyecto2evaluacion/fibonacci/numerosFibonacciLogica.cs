@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Numeros.Fibologica
+//preguntar si ese es el nombre valido para el namespace del subsistema
+namespace Numeros.Fibonacci
 {
     /// <summary>
     /// Clase logica statica de números fibonacci
@@ -29,12 +29,12 @@ namespace Numeros.Fibologica
 
             string textoAlmacenaFibo = "Estos son los números fibonacci hasta el número introducido: ";
 
-
-
             //se le añade el 0 porque se consedera que es un número fibonacci
             textoAlmacenaFibo = textoAlmacenaFibo + numFibo1 + ",";
 
             bool acabar = false;
+
+
             for (int i = 0; numFibo1 < numIntroducido && !acabar; i++)
             {
 
@@ -57,9 +57,8 @@ namespace Numeros.Fibologica
                         textoAlmacenaFibo = textoAlmacenaFibo + numFibo1 + ",";
 
                     }
-                }
 
-               
+                }
 
             }
 

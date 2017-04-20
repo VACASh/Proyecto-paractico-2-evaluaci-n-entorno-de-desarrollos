@@ -71,6 +71,7 @@
             this.lNumeroDiscos.Size = new System.Drawing.Size(189, 13);
             this.lNumeroDiscos.TabIndex = 3;
             this.lNumeroDiscos.Text = "Numeros de discos con los que juegas";
+            this.lNumeroDiscos.Click += new System.EventHandler(this.lNumeroDiscos_Click);
             // 
             // cajaMovimientos
             // 
@@ -87,9 +88,10 @@
             this.lMinimoMaximo.AutoSize = true;
             this.lMinimoMaximo.Location = new System.Drawing.Point(208, 35);
             this.lMinimoMaximo.Name = "lMinimoMaximo";
-            this.lMinimoMaximo.Size = new System.Drawing.Size(103, 13);
+            this.lMinimoMaximo.Size = new System.Drawing.Size(178, 13);
             this.lMinimoMaximo.TabIndex = 5;
-            this.lMinimoMaximo.Text = "Minimo 1 , Máximo 9";
+            this.lMinimoMaximo.Text = "stringHanoi\tMinimo1 ,Máximo 9\tes-ES";
+            this.lMinimoMaximo.Click += new System.EventHandler(this.lMinimoMaximo_Click);
             // 
             // torresHanoi
             // 

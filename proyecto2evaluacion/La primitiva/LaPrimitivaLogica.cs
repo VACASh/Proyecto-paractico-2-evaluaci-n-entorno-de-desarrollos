@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace Numeros.PrimitivaLogica
 {
-    class LaPrimitivaLogica
+    class laPrimitivaLogica
     {
 
         ArrayList listaPremiada = new ArrayList();
@@ -118,6 +118,15 @@ namespace Numeros.PrimitivaLogica
                 }            
 
             }
+        }
+
+        /// <summary>
+        /// Renicia primitiva
+        /// </summary>
+        public void reiniciarPrimitiva()
+        {
+            listaDondeJuegas.Clear();
+            listaPremiada.Clear();
         }
     }
 }

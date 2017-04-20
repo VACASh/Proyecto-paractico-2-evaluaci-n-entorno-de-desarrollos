@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NumerosNumerosFibo.Properties {
+namespace proyecto2evaluacion.Properties {
     using System;
     
     
@@ -127,6 +127,15 @@ namespace NumerosNumerosFibo.Properties {
             get {
                 object obj = ResourceManager.GetObject("primos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Minimo1 ,Máximo 9.
+        /// </summary>
+        internal static string stringHanoi {
+            get {
+                return ResourceManager.GetString("stringHanoi", resourceCulture);
             }
         }
     }

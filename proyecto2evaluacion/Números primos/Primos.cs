@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/// <summary>
-/// espacio de nombres  de la clase primos
-/// </summary>
+
 namespace Numeros.Primos
 {
     /// <summary>
@@ -32,9 +30,6 @@ namespace Numeros.Primos
         int numeroMatriz01 = -1;
         int numeroMatriz11 = -1;
 
-
-
-
         /// <summary>
         /// inicializa formulario
         /// </summary>
@@ -52,14 +47,12 @@ namespace Numeros.Primos
         /// <param name="e">sin uso</param>
         private void bPrimos(object sender, EventArgs e)
         {
-
-
             matrizPrimos[0, 0] = int.Parse(tMatriz00.Text);
             matrizPrimos[0, 1] = int.Parse(tMatriz01.Text);
             matrizPrimos[1, 0] = int.Parse(tMatriz10.Text);
             matrizPrimos[1, 1] = int.Parse(tMatriz11.Text);
 
-            string texto = PrimosLogica.numerosPrimosLogica.comprobarMatriz(matrizPrimos);
+            string texto = Primos.numerosPrimosLogica.comprobarMatriz(matrizPrimos);
 
             MessageBox.Show(texto);
 
@@ -77,8 +70,9 @@ namespace Numeros.Primos
         /// <summary>
         /// Text change con las condiciones que no esten vacias y limitando el tamaño del texto
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <remarks>Controola que no lleguen al maxvalue</remarks>
+        /// <param name="sender">Lanza el textchange del tMatriz00 el resto de textbox hacen uso de el</param>
+        /// <param name="e">Sin uso</param>
         private void tMatriz00_TextChanged(object sender, EventArgs e)
         {
             //Pasan todos los números de la matriz por el try parse para que se pueda activar el boton
@@ -91,7 +85,7 @@ namespace Numeros.Primos
                 && numeroMatriz10 < int.MaxValue && numeroMatriz01 > 0 && numeroMatriz01 < int.MaxValue
                 && numeroMatriz11 > 0 && numeroMatriz11 < int.MaxValue)
             {
-                
+
                 bIngresarNumeros.Enabled = true;
 
             }
@@ -101,17 +95,19 @@ namespace Numeros.Primos
                 bIngresarNumeros.Enabled = false;
 
                 //Si todos estan con algo en el textbox comprueba que sean caracteres validos
-                if (tMatriz00.Text != "" && tMatriz01.Text != "" && tMatriz10.Text != "" && tMatriz11.Text != "")
+                if (!string.IsNullOrEmpty(tMatriz00.Text) && !string.IsNullOrEmpty(tMatriz01.Text)
+                    && !string.IsNullOrEmpty(tMatriz10.Text) && !string.IsNullOrEmpty(tMatriz11.Text))
                 {
-                    if (tMatriz00.Text != "" || tMatriz01.Text != "" || tMatriz10.Text != "" || tMatriz11.Text != "")
+                    if (string.IsNullOrEmpty(tMatriz00.Text) || string.IsNullOrEmpty(tMatriz01.Text)
+                        || string.IsNullOrEmpty(tMatriz10.Text) || string.IsNullOrEmpty(tMatriz11.Text))
                     {
 
                         MessageBox.Show("Para jugar solo puede ser un número entre 1 y maxvalue, no validos otros valores");
 
-                        tMatriz00.Text = "";
-                        tMatriz01.Text = "";
-                        tMatriz10.Text = "";
-                        tMatriz11.Text = "";
+                        tMatriz00.Text = null;
+                        tMatriz01.Text = null;
+                        tMatriz10.Text = null;
+                        tMatriz11.Text = null;
 
                     }
 
@@ -122,6 +118,7 @@ namespace Numeros.Primos
             tMatriz01.MaxLength = 10;
             tMatriz10.MaxLength = 10;
             tMatriz11.MaxLength = 10;
+
         }
     }
 }
