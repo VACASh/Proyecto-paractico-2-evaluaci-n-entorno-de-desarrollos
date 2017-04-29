@@ -66,8 +66,8 @@ namespace Numeros.Hanoi
         /// <param name="e">sin uso</param>
         private void formularioTorresDeHanoiLoad(object sender, EventArgs e)
         {
-           // string manejandoTexto = proyecto2evaluacion.Properties.Resources.stringHanoi;
-           // manejoTexto = new ResourceManager("es-ES", Assembly.GetExecutingAssembly());
+            // string manejandoTexto = proyecto2evaluacion.Properties.Resources.stringHanoi;
+            // manejoTexto = new ResourceManager("es-ES", Assembly.GetExecutingAssembly());
             //solucionar
             //lMinimoMaximo.Text = manejoTexto.GetString(manejoTexto);
 
@@ -123,7 +123,7 @@ namespace Numeros.Hanoi
 
         private void lMinimoMaximo_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
