@@ -9,9 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
 
-/// <summary>
-/// espacio de nombres de la clase torres de hanoi
-/// </summary>
+
 namespace Numeros.Hanoi
 {
     /// <summary>
@@ -45,15 +43,11 @@ namespace Numeros.Hanoi
 
             string textoMovimentos = "";
 
-            TorresHanoi.torresDeHanoiLogica oTorres = new TorresHanoi.torresDeHanoiLogica();
+            Hanoi.torresDeHanoiLogica oTorres = new Hanoi.torresDeHanoiLogica();
 
             numDiscos = int.Parse(introducirNumeros.Text);
 
             oTorres.torresDeHanoi(numDiscos, "Origen", "Destino", "Auxiliar", ref textoMovimentos);
-
-            cajaMovimientos.Text = textoMovimentos;
-            int maxString = textoMovimentos.Length;
-            MessageBox.Show("hola "+maxString);
 
         }
 
@@ -65,6 +59,8 @@ namespace Numeros.Hanoi
         /// <param name="e">sin uso</param>
         private void formularioTorresDeHanoiLoad(object sender, EventArgs e)
         {
+
+            introducirNumeros.MaxLength = 1;
 
         }
         /// <summary>
@@ -97,19 +93,15 @@ namespace Numeros.Hanoi
 
                 bJugarTorres.Enabled = false;
 
-                if (introducirNumeros.Text != "")
+                if (!string.IsNullOrEmpty( introducirNumeros.Text))
                 {
                     MessageBox.Show("Para jugar solo puede ser un número entre 1 y 9");
 
                     introducirNumeros.Text = "";
 
                 }
-              
-                
-
+                            
             }
-
-            introducirNumeros.MaxLength = 1;
 
         }
     }

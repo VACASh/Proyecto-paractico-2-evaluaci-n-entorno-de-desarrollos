@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Numeros.Fibologica
+namespace Numeros.Fibonacci
 {
     /// <summary>
     /// Clase logica statica de números fibonacci

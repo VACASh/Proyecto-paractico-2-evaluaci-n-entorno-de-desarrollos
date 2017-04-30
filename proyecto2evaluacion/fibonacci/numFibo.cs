@@ -67,7 +67,7 @@ namespace Numeros.Fibonacci
                 if (numIntroducido > 0)
                 {
 
-                    string textoFibo =Fibologica.numerosFibonacciLogica.textFibo(numIntroducido);
+                    string textoFibo =Fibonacci.numerosFibonacciLogica.textFibo(numIntroducido);
 
                     MessageBox.Show(textoFibo);
 

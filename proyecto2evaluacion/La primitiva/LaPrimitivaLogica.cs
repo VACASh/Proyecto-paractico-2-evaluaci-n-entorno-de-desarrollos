@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace Numeros.PrimitivaLogica
+namespace Numeros.Primitiva
 {
     class LaPrimitivaLogica
     {

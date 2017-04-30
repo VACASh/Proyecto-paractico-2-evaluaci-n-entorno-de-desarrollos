@@ -18,7 +18,7 @@ namespace Numeros.Primitiva
     /// </summary>
     public partial class jugarPrimitiva : Form
     {
-        PrimitivaLogica.LaPrimitivaLogica oPrimitiva = new PrimitivaLogica.LaPrimitivaLogica();
+        Primitiva.LaPrimitivaLogica oPrimitiva = new Primitiva.LaPrimitivaLogica();
 
         const int kPrimitiva = 6;
 
@@ -111,7 +111,7 @@ namespace Numeros.Primitiva
         /// <param name="e">sin uso</param>
         private void formularioPrimitivaLoad(object sender, EventArgs e)
         {
-
+            tRellenarPrimitiva.MaxLength = 2;
         }
 
         private void tRellenarPrimitiva_TextChanged(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace Numeros.Primitiva
 
             }
 
-            tRellenarPrimitiva.MaxLength = 2;
+           
         }
     }
 }
