@@ -16,8 +16,8 @@ namespace Numeros.Fibonacci
     /// </summary>
     public partial class numFibonacci : Form
     {
-        //numero usado para comprobar , inicializado a -1 para darle un valor luego cambia por el del textbox
-        int numIntroducido = -1;
+
+
 
         /// <summary>
         /// Inicializa componentes
@@ -26,6 +26,9 @@ namespace Numeros.Fibonacci
         {
             InitializeComponent();
         }
+
+
+
 
         /// <summary>
         /// Carga la parte visual del formulario
@@ -56,61 +59,61 @@ namespace Numeros.Fibonacci
         private void bFibo(object sender, EventArgs e)
         {
 
+            int numIntroducido = -1;
 
-            string textoFibo = Fibonacci.numerosFibonacciLogica.textFibo(numIntroducido);
-
-            MessageBox.Show(textoFibo);
-
-        }
-        /// <summary>
-        /// Usado para limitar el tamaño a 10 caracteres y deshabilitado el botón si no introducen
-        /// caracteres adecuados
-        /// </summary>
-        /// <remarks>No deja introducir nada que no este comprendido entre 1 y maxvalue-1</remarks>
-        /// <param name="sender">Lanza el textchange del formulario </param>
-        /// <param name="e">Sin uso</param>
-        private void tFibo_TextChanged(object sender, EventArgs e)
-        {
-            //limitado el texto a 10 para que no puedas pasarse del maxvalue
-            tFibo.MaxLength = 10;
-
-            if (int.TryParse(tFibo.Text, out numIntroducido) && !string.IsNullOrEmpty(tFibo.Text))
+            if (int.TryParse(tFibo.Text, out numIntroducido) && numIntroducido < int.MaxValue && numIntroducido > 0)
             {
 
-                if (numIntroducido > 0 )
+                if (numIntroducido > 0)
                 {
 
-                    bMostrar.Enabled = true;
+                    string textoFibo =Fibologica.numerosFibonacciLogica.textFibo(numIntroducido);
+
+                    MessageBox.Show(textoFibo);
 
                 }
                 else
                 {
 
-                    
-                    bMostrar.Enabled = false;
-
                     MessageBox.Show("El número debe ser mayor de 0");
 
-                    tFibo.Text = null;
                 }
 
             }
             else
             {
 
-                if (!string.IsNullOrEmpty(tFibo.Text))
-                {
-                    MessageBox.Show("Debe introducir un número entero positivo no valen caracteres ni se debe pasar el numero maximo permitido");
 
-                    tFibo.Text = null;
+                if (numIntroducido >= int.MaxValue)
+                {
+
+                    MessageBox.Show("El número introducido supera el valor maximo permitido para un entero");
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Inserte un número , el resto de parámetros son inválidos");
 
                 }
 
-                bMostrar.Enabled = false;
-
             }
 
+
+
+
+        }
+        /// <summary>
+        /// Usado para limitar el tamaño a 10 caracteres
+        /// </summary>
+        /// <param name="sender">Lanza el textchange del formulario </param>
+        /// <param name="e">Sin uso</param>
+        private void tFibo_TextChanged(object sender, EventArgs e)
+        {
+            //limitado el texto a 10 para que no puedas pasarse del maxvalue
+            tFibo.MaxLength = 10;
         }
 
+ 
     }
 }

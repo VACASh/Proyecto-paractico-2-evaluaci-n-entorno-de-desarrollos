@@ -76,6 +76,7 @@
             // 
             // bPrimitivaFormulario
             // 
+            this.bPrimitivaFormulario.BackgroundImage = global::NumerosNumerosFibo.Properties.Resources.primitiva;
             this.bPrimitivaFormulario.Location = new System.Drawing.Point(433, 199);
             this.bPrimitivaFormulario.Name = "bPrimitivaFormulario";
             this.bPrimitivaFormulario.Size = new System.Drawing.Size(87, 74);
@@ -85,6 +86,7 @@
             // 
             // bNumerosPrimosFormulario
             // 
+            this.bNumerosPrimosFormulario.BackgroundImage = global::NumerosNumerosFibo.Properties.Resources.primos;
             this.bNumerosPrimosFormulario.Location = new System.Drawing.Point(61, 199);
             this.bNumerosPrimosFormulario.Name = "bNumerosPrimosFormulario";
             this.bNumerosPrimosFormulario.Size = new System.Drawing.Size(87, 74);
@@ -94,7 +96,7 @@
             // 
             // bTorresDeHanoiFormulario
             // 
-            
+            this.bTorresDeHanoiFormulario.BackgroundImage = global::NumerosNumerosFibo.Properties.Resources.hanoi;
             this.bTorresDeHanoiFormulario.Location = new System.Drawing.Point(433, 61);
             this.bTorresDeHanoiFormulario.Name = "bTorresDeHanoiFormulario";
             this.bTorresDeHanoiFormulario.Size = new System.Drawing.Size(87, 74);
@@ -104,6 +106,7 @@
             // 
             // bFormularioFibonacci
             // 
+            this.bFormularioFibonacci.BackgroundImage = global::NumerosNumerosFibo.Properties.Resources.fibonnaci1;
             this.bFormularioFibonacci.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.bFormularioFibonacci.Location = new System.Drawing.Point(61, 61);
             this.bFormularioFibonacci.Name = "bFormularioFibonacci";
@@ -117,6 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::NumerosNumerosFibo.Properties.Resources.numeros;
             this.ClientSize = new System.Drawing.Size(601, 326);
             this.Controls.Add(this.lPrimitivaFormulario);
             this.Controls.Add(this.lNumerosPrimosFormulario);
@@ -127,7 +131,7 @@
             this.Controls.Add(this.bTorresDeHanoiFormulario);
             this.Controls.Add(this.bFormularioFibonacci);
             this.Name = "tNumeros";
-            this.Text = "Números";
+            this.Text = "fibonacci";
             this.Load += new System.EventHandler(this.forNumerosLoad);
             this.ResumeLayout(false);
             this.PerformLayout();

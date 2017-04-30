@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Numeros.Primos
+namespace Numeros.PrimosLogica
 {
     /// <summary>
     /// clase estatica de la logica de numeros primos
@@ -40,12 +40,30 @@ namespace Numeros.Primos
 
         }
 
-       
+        /// <summary>
+        /// Va ingresando números a la matriz  y rellenandola
+        /// </summary>
+        /// <param name="culaqueirMatriz">matriz donde ingresas números </param>
+        //static public void ingresarMatriz(int[,] culaqueirMatriz)
+        //{
+
+        //    for (int i = 0; i < culaqueirMatriz.GetLength(0); i++)
+        //    {
+
+        //        for (int j = 0; j < culaqueirMatriz.GetLength(1); j++)
+        //        {
+
+        //            culaqueirMatriz[i, j] = int.Parse(InputBox("Elemento[" + i + ", " + j + "]"));
+
+        //        }
+
+        //    }
+
+        //}
 
         /// <summary>
         /// Almacena los números primos dentro de la matriz en un string 
         /// </summary>
-        /// <remarks>llama al metodo para ver cuales son primos</remarks>
         /// <param name="cualquierMatrizComprobar">Matriz de números</param>
         /// <returns>Devuelve string con los números primos</returns>
         public static string comprobarMatriz(int[,] cualquierMatrizComprobar)

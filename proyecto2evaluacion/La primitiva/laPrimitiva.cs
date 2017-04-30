@@ -18,7 +18,7 @@ namespace Numeros.Primitiva
     /// </summary>
     public partial class jugarPrimitiva : Form
     {
-        PrimitivaLogica.laPrimitivaLogica oPrimitiva = new PrimitivaLogica.laPrimitivaLogica();
+        PrimitivaLogica.LaPrimitivaLogica oPrimitiva = new PrimitivaLogica.LaPrimitivaLogica();
 
         const int kPrimitiva = 6;
 
@@ -41,16 +41,12 @@ namespace Numeros.Primitiva
         /// Botón donde se hace el sorteo y lo compara con los números que has ingresado
         /// </summary>
         /// <remarks>Primero rellena la lista con números aleatorios antes de almacenar texto</remarks>
-        /// <param name="sender">Lanza el  botón bMuestraPremio</param>
+        /// <param name="sender">Lanza el evento del botón bMuestraPremio</param>
         /// <param name="e">sin uso</param>
         private void bMuestraPremio(object sender, EventArgs e)
         {
             oPrimitiva.borrarLista();
             oPrimitiva.rellenarPremiado();
-
-            bReiniciarPrimitiva.Enabled = true;
-
-            bProbarSuerte.Enabled = false;
 
             string textoMostrar = oPrimitiva.textoLoteria();
 
@@ -103,6 +99,9 @@ namespace Numeros.Primitiva
 
             }
 
+
+
+
         }
 
         /// <summary>
@@ -115,47 +114,18 @@ namespace Numeros.Primitiva
 
         }
 
-        /// <summary>
-        /// Textchanged para controlar el boton desactivado si no insertas los números adecuados
-        /// </summary>
-        /// <remarks>Si no esta vacio activa el boton</remarks>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void tRellenarPrimitiva_TextChanged(object sender, EventArgs e)
         {
+            string comprobarVacio = tRellenarPrimitiva.Text;
 
-            if (!string.IsNullOrEmpty(tRellenarPrimitiva.Text))
+            if (!string.IsNullOrEmpty(comprobarVacio))
             {
 
                 bRellenarPrimitiva.Enabled = true;
 
             }
-            else
-            {
-
-                bRellenarPrimitiva.Enabled = false;
-
-            }
 
             tRellenarPrimitiva.MaxLength = 2;
-        }
-        /// <summary>
-        /// reinicia la primitiva para que vuelvas a jugar desde 0 con nuevos números
-        /// </summary>
-        /// <remarks>Borra tanto la lista de jugar como la premiada</remarks>
-        /// <param name="sender">Lanza al boton de reiniciar la primitiva</param>
-        /// <param name="e">Sin uso</param>
-        private void bReiniciarPrimitiva_Click(object sender, EventArgs e)
-        {
-            contadorDeNumeros = 0;
-
-            oPrimitiva.reiniciarPrimitiva();
-
-            bReiniciarPrimitiva.Enabled = false;
-
-            bRellenarPrimitiva.Enabled = true;
-
-            tRellenarPrimitiva.Enabled = true;
         }
     }
 }

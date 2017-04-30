@@ -87,7 +87,7 @@
     <Compile Include="La primitiva\laPrimitiva.designer.cs">
       <DependentUpon>laPrimitiva.cs</DependentUpon>
     </Compile>
-    <Compile Include="La primitiva\laPrimitivaLogica.cs" />
+    <Compile Include="La primitiva\LaPrimitivaLogica.cs" />
     <Compile Include="Números primos\numerosPrimosLogica.cs" />
     <Compile Include="Números primos\Primos.cs">
       <SubType>Form</SubType>
@@ -120,11 +120,11 @@
     <EmbeddedResource Include="Números primos\Primos.resx">
       <DependentUpon>Primos.cs</DependentUpon>
     </EmbeddedResource>
-    <Resource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </Resource>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -183,9 +183,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LaPrimitiva.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
