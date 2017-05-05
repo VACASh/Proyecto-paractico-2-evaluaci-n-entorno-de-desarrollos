@@ -112,6 +112,13 @@ namespace Numeros.Fibonacci
         {
             //limitado el texto a 10 para que no puedas pasarse del maxvalue
             tFibo.MaxLength = 10;
+            if (!int.TryParse(tFibo.Text, out int resultadoEsperado) && !string.IsNullOrEmpty(tFibo.Text))
+            {
+                MessageBox.Show("inserte un valor adecuado no sobre pase el max value");
+                tFibo.Text = "";
+            }
+          
+            
         }
 
  

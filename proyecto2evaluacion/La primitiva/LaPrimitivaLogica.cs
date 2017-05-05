@@ -7,19 +7,32 @@ using System.Collections;
 
 namespace Numeros.Primitiva
 {
-    class LaPrimitivaLogica
+    /// <summary>
+    /// Clase de la primitiva logica publica para poder realizar pruebas unitarias
+    /// </summary>
+    public class LaPrimitivaLogica
     {
-
-        ArrayList listaPremiada = new ArrayList();
-        ArrayList listaDondeJuegas = new ArrayList();
+        /// <summary>
+        /// arraylist de lista premiada publica para poder realizar pruebas unitarias
+        /// </summary>
+        public ArrayList listaPremiada = new ArrayList();
+        /// <summary>
+        /// arraylist de lista donde juegas publica para realizar pruebas unitarias
+        /// </summary>
+        public ArrayList listaDondeJuegas = new ArrayList();
 
 
 
         Random randomLoteria = new Random();
-
+        /// <summary>
+        /// borrar ambas listas para jugar de nuevo
+        /// </summary>
         public void borrarLista()
         {
+
+            listaDondeJuegas.Clear();
             listaPremiada.Clear();
+
         }
 
 
@@ -36,7 +49,7 @@ namespace Numeros.Primitiva
 
             for (int i = 0; i < listaPremiada.Count; i++)
             {
-                
+
                 if (listaPremiada.Contains(listaDondeJuegas[i]))
                 {
 
@@ -73,6 +86,7 @@ namespace Numeros.Primitiva
         {
 
             string suceso = "El número ";
+
             if (numeroQueIngresas < 50 && numeroQueIngresas > 0)
             {
 
@@ -109,18 +123,18 @@ namespace Numeros.Primitiva
 
                 int numRandom = randomLoteria.Next(49);
 
-                if (!listaPremiada.Contains(numRandom) && numRandom!=0)
+                if (!listaPremiada.Contains(numRandom) && numRandom != 0)
                 {
 
                     listaPremiada.Add(numRandom);
                     i++;
-                    
-                }            
+
+                }
 
             }
         }
     }
 }
 
-    
+
 

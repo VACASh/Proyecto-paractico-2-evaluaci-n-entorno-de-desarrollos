@@ -70,11 +70,6 @@
     <Compile Include="fibonacci\numFibo.designer.cs">
       <DependentUpon>numFibo.cs</DependentUpon>
     </Compile>
-    <Compile Include="fibonacci\Resource1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource1.resx</DependentUpon>
-    </Compile>
     <Compile Include="Formnumeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,10 +101,6 @@
     <Compile Include="Torres de Hanoi\torresDeHanoiLogica.cs" />
     <EmbeddedResource Include="fibonacci\numFibo.resx">
       <DependentUpon>numFibo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fibonacci\Resource1.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Formnumeros.resx">
       <DependentUpon>Formnumeros.cs</DependentUpon>

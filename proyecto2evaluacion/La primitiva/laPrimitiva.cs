@@ -18,7 +18,7 @@ namespace Numeros.Primitiva
     /// </summary>
     public partial class jugarPrimitiva : Form
     {
-        Primitiva.LaPrimitivaLogica oPrimitiva = new Primitiva.LaPrimitivaLogica();
+        LaPrimitivaLogica oPrimitiva = new LaPrimitivaLogica();
 
         const int kPrimitiva = 6;
 
@@ -45,12 +45,15 @@ namespace Numeros.Primitiva
         /// <param name="e">sin uso</param>
         private void bMuestraPremio(object sender, EventArgs e)
         {
-            oPrimitiva.borrarLista();
+            
             oPrimitiva.rellenarPremiado();
 
             string textoMostrar = oPrimitiva.textoLoteria();
 
             MessageBox.Show(textoMostrar);
+
+            bProbarSuerte.Enabled = false;
+            bReiniciarLaPrimitiva.Enabled = true;
 
         }
 
@@ -126,6 +129,24 @@ namespace Numeros.Primitiva
             }
 
            
+        }
+
+        private void bReiniciarLaPrimitiva_Click(object sender, EventArgs e)
+        {
+
+            tRellenarPrimitiva.Enabled = true;
+            bRellenarPrimitiva.Enabled = true;
+            bProbarSuerte.Enabled = false;
+            bReiniciarLaPrimitiva.Enabled = false;
+
+            oPrimitiva.borrarLista();
+
+            contadorDeNumeros = 0;
+        }
+
+        private void ingresarNumerosQueJuegas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
