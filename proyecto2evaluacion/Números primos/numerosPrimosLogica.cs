@@ -19,7 +19,7 @@ namespace Numeros.Primos
         /// que sea primo</remarks>
         /// <param name="numRecibido">El numero que se le pasa para comprobar si es primo</param>
         /// <returns>Devuelve booleano si es primo devuelve true si no es primo devuelve false</returns>
-        static bool esPrimo(int numRecibido)
+        public static bool esPrimo(int numRecibido)
         {
 
             bool buscarPrimo = true;
@@ -61,7 +61,7 @@ namespace Numeros.Primos
                     if (esPrimo(cualquierMatrizComprobar[i, j]))
                     {
 
-                        textoMatrices = textoMatrices + "de la posicion " + i + "," + j + "el valor: " + cualquierMatrizComprobar[i, j] + "\n";
+                        textoMatrices = textoMatrices + "de la posicion " + i + "," + j + "el valor: " + cualquierMatrizComprobar[i, j] + "\n ";
 
                     }
 

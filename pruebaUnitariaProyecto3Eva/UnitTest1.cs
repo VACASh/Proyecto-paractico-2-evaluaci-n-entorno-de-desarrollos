@@ -11,7 +11,8 @@ namespace pruebaUnitariaProyecto3Eva
         public class pruebasUnitarias3Evaluacion
         {
             /// <summary>
-            /// Caso de prueba para números fibonacci,los rangos estan controladas con las pruebas
+            /// Caso de prueba para números fibonacci,los rangos estan
+            /// controladas con las pruebas
             /// de caja negra y negativos y caracteres tambien.
             /// <remarks>Unica prueba necesaria para números fibonacci</remarks>
             /// </summary>
@@ -22,7 +23,7 @@ namespace pruebaUnitariaProyecto3Eva
                 int numInicial = 111;
                 string textoEsperado = "Estos son los números fibonacci hasta el número introducido: 0,1,1,2,3,5,8,13,21,34,55,89,";
                 string textoObtenido = "";
-                bool acabar = false;
+
                 //acción
                 textoObtenido = Numeros.Fibonacci.numerosFibonacciLogica.textFibo(numInicial);
 
@@ -194,7 +195,94 @@ namespace pruebaUnitariaProyecto3Eva
                 Assert.AreEqual(textoEsperado, textoObtenido);
 
             }
+            /// <summary>
+            /// Prueba unitaria para numeros primos con resultado 
+            /// de numero primo true
+            /// </summary>
+            [TestMethod]
+            public void testPrimosEsPrimo()
+            {
+                //escenario
+                int numInicial = 11;
+
+                bool resultadoEsperado = true;
+                bool resultadoObtenido = true;
+
+                //acción
+                resultadoObtenido = Numeros.Primos.numerosPrimosLogica.esPrimo(numInicial);
+
+                //afirmación
+                Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+            }
+            /// <summary>
+            /// Prueba unitaria para numeros primos con resultado 
+            /// de número primo false
+            /// </summary>
+            [TestMethod]
+            public void testPrimosNoEsPrimo()
+            {
+                //escenario
+                int numInicial = 8;
+
+                bool resultadoEsperado = false;
+                bool resultadoObtenido = false;
+
+                //acción
+                resultadoObtenido = Numeros.Primos.numerosPrimosLogica.esPrimo(numInicial);
+
+                //afirmación
+                Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+            }
+
+            /// <summary>
+            /// prueba unitaria cuando en la matriz hay 2 números
+            /// primos muestra cuales son
+            /// </summary>
+            [TestMethod]
+            public void testMatrizPrimos()
+            {
+                //escenario
+
+                //matriz creada de 2x2
+                int[,] matrizPrimos = new int[2, 2];
+
+                //agrego los 4 numeros
+                matrizPrimos[0, 0] = 2;
+                matrizPrimos[0, 1] = 8;
+                matrizPrimos[1, 0] = 11;
+                matrizPrimos[1, 1] = 22;
+
+                string resultadoEsperado = "Los números primos dentro de la matriz son: \nde la posicion 0,0el valor: 2\n de la posicion 1,0el valor: 11\n ";
+                string resultadoObtenido = "";
+
+                //acción
+                resultadoObtenido = Numeros.Primos.numerosPrimosLogica.comprobarMatriz(matrizPrimos);
+
+                //afirmación
+                Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+            }
+
+            [TestMethod]
+            public void testTorresHanoi()
+            {
+                //escenario
+                int numeroIntroducido = 3;
+
+                string resultadoObtenido = "";
+
+                Numeros.Hanoi.torresDeHanoiLogica oHanoi = new Numeros.Hanoi.torresDeHanoiLogica();
+                //aqui se obtiene el resultado obtenido
+                oHanoi.torresDeHanoi(numeroIntroducido, "Origen", "Destino", "Auxiliar", ref resultadoObtenido);
+
+                string resultadoEsperado = "Muevo el disco 1 de Origen a Destino\n Muevo el disco 2 de Origen a Auxiliar\n Muevo el disco 1 de Destino a Auxiliar\n Muevo el disco 3 de Origen a Destino\n Muevo el disco 1 de Auxiliar a Origen\n Muevo el disco 2 de Auxiliar a Destino\n Muevo el disco 1 de Origen a Destino\n ";
+               
+                //acción
+                
+
+                //afirmación
+                Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+            }
         }
-       
+
     }
 }

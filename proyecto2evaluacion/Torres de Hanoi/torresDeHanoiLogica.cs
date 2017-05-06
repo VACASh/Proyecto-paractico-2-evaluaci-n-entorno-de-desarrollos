@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Numeros.Hanoi
 {
-     class torresDeHanoiLogica
+    /// <summary>
+    /// Clase publica de las torres de hanoi logica
+    /// </summary>
+     public class torresDeHanoiLogica
     {
 
         /// <summary>

@@ -43,12 +43,13 @@ namespace Numeros.Hanoi
 
             string textoMovimentos = "";
 
-            Hanoi.torresDeHanoiLogica oTorres = new Hanoi.torresDeHanoiLogica();
+            torresDeHanoiLogica oTorres = new torresDeHanoiLogica();
 
             numDiscos = int.Parse(introducirNumeros.Text);
 
             oTorres.torresDeHanoi(numDiscos, "Origen", "Destino", "Auxiliar", ref textoMovimentos);
 
+            cajaMovimientos.Text = textoMovimentos;
         }
 
 
