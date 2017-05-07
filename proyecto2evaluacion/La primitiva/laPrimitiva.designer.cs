@@ -31,7 +31,7 @@
             this.bRellenarPrimitiva = new System.Windows.Forms.Button();
             this.bProbarSuerte = new System.Windows.Forms.Button();
             this.tRellenarPrimitiva = new System.Windows.Forms.TextBox();
-            this.ingresarNumerosQueJuegas = new System.Windows.Forms.Label();
+            this.lIngresarNumeros = new System.Windows.Forms.Label();
             this.bReiniciarLaPrimitiva = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,16 +65,16 @@
             this.tRellenarPrimitiva.TabIndex = 2;
             this.tRellenarPrimitiva.TextChanged += new System.EventHandler(this.tRellenarPrimitiva_TextChanged);
             // 
-            // ingresarNumerosQueJuegas
+            // lIngresarNumeros
             // 
-            this.ingresarNumerosQueJuegas.AutoSize = true;
-            this.ingresarNumerosQueJuegas.BackColor = System.Drawing.Color.Transparent;
-            this.ingresarNumerosQueJuegas.Location = new System.Drawing.Point(12, 101);
-            this.ingresarNumerosQueJuegas.Name = "ingresarNumerosQueJuegas";
-            this.ingresarNumerosQueJuegas.Size = new System.Drawing.Size(226, 13);
-            this.ingresarNumerosQueJuegas.TabIndex = 3;
-            this.ingresarNumerosQueJuegas.Text = "Ves ingresnado los números que quieres jugar:";
-            this.ingresarNumerosQueJuegas.Click += new System.EventHandler(this.ingresarNumerosQueJuegas_Click);
+            this.lIngresarNumeros.AutoSize = true;
+            this.lIngresarNumeros.BackColor = System.Drawing.Color.Transparent;
+            this.lIngresarNumeros.Location = new System.Drawing.Point(12, 101);
+            this.lIngresarNumeros.Name = "lIngresarNumeros";
+            this.lIngresarNumeros.Size = new System.Drawing.Size(226, 13);
+            this.lIngresarNumeros.TabIndex = 3;
+            this.lIngresarNumeros.Text = "Ves ingresnado los números que quieres jugar:";
+            this.lIngresarNumeros.Click += new System.EventHandler(this.ingresarNumerosQueJuegas_Click);
             // 
             // bReiniciarLaPrimitiva
             // 
@@ -93,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(427, 333);
-            this.Controls.Add(this.ingresarNumerosQueJuegas);
+            this.Controls.Add(this.lIngresarNumeros);
             this.Controls.Add(this.bReiniciarLaPrimitiva);
             this.Controls.Add(this.tRellenarPrimitiva);
             this.Controls.Add(this.bProbarSuerte);
@@ -111,7 +111,7 @@
         private System.Windows.Forms.Button bRellenarPrimitiva;
         private System.Windows.Forms.Button bProbarSuerte;
         private System.Windows.Forms.TextBox tRellenarPrimitiva;
-        private System.Windows.Forms.Label ingresarNumerosQueJuegas;
+        private System.Windows.Forms.Label lIngresarNumeros;
         private System.Windows.Forms.Button bReiniciarLaPrimitiva;
     }
 }

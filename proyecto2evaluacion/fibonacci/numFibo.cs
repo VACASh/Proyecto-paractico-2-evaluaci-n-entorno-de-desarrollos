@@ -61,43 +61,55 @@ namespace Numeros.Fibonacci
 
             int numIntroducido = -1;
 
-            if (int.TryParse(tFibo.Text, out numIntroducido) && numIntroducido < int.MaxValue && numIntroducido > 0)
+            try
             {
 
-                if (numIntroducido > 0)
+                if (int.TryParse(tFibo.Text, out numIntroducido) && numIntroducido < int.MaxValue && numIntroducido > 0)
                 {
 
-                    string textoFibo =Fibonacci.numerosFibonacciLogica.textFibo(numIntroducido);
+                    if (numIntroducido > 0)
+                    {
 
-                    MessageBox.Show(textoFibo);
+                        string textoFibo = numerosFibonacciLogica.textFibo(numIntroducido);
+
+                        MessageBox.Show(textoFibo);
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("El número debe ser mayor de 0");
+
+                    }
 
                 }
                 else
                 {
 
-                    MessageBox.Show("El número debe ser mayor de 0");
+
+                    if (numIntroducido >= int.MaxValue)
+                    {
+
+                        MessageBox.Show("El número introducido supera el valor maximo permitido para un entero");
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Inserte un número , el resto de parámetros son inválidos");
+
+                    }
 
                 }
 
             }
-            else
+            catch (Exception ex)
             {
 
-
-                if (numIntroducido >= int.MaxValue)
-                {
-
-                    MessageBox.Show("El número introducido supera el valor maximo permitido para un entero");
-
-                }
-                else
-                {
-
-                    MessageBox.Show("Inserte un número , el resto de parámetros son inválidos");
-
-                }
+                MessageBox.Show("Se ha producido un error " + ex.Message);
 
             }
+            
 
 
 
@@ -114,7 +126,7 @@ namespace Numeros.Fibonacci
             tFibo.MaxLength = 10;
             if (!int.TryParse(tFibo.Text, out int resultadoEsperado) && !string.IsNullOrEmpty(tFibo.Text))
             {
-                MessageBox.Show("inserte un valor adecuado no sobre pase el max value");
+                MessageBox.Show("inserte un valor adecuado no sobrepase el valor maximo permitido por visual stuido");
                 tFibo.Text = "";
             }
           

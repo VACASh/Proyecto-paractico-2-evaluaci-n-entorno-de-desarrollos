@@ -41,15 +41,25 @@ namespace Numeros.Hanoi
         private void bHanoi(object sender, EventArgs e)
         {
 
-            string textoMovimentos = "";
+            try
+            {
+                string textoMovimentos = "";
 
-            torresDeHanoiLogica oTorres = new torresDeHanoiLogica();
+                torresDeHanoiLogica oTorres = new torresDeHanoiLogica();
 
-            numDiscos = int.Parse(introducirNumeros.Text);
+                numDiscos = int.Parse(introducirNumeros.Text);
 
-            oTorres.torresDeHanoi(numDiscos, "Origen", "Destino", "Auxiliar", ref textoMovimentos);
+                oTorres.torresDeHanoi(numDiscos, "Origen", "Destino", "Auxiliar", ref textoMovimentos);
 
-            cajaMovimientos.Text = textoMovimentos;
+                cajaMovimientos.Text = textoMovimentos;
+
+            }
+            catch (Exception exCatch)
+            {
+
+                MessageBox.Show("Se ha producido un error " + exCatch);
+            }
+            
         }
 
 
@@ -67,7 +77,7 @@ namespace Numeros.Hanoi
         /// <summary>
         /// textbox donde se almacena el texto
         /// </summary>
-        /// <param name="sender">Lanza el  textbox donde almacena movimientos</param>
+        /// <param name="sender">Lanza el  textchanged donde almacena movimientos</param>
         /// <param name="e">sin uso</param>
         private void tTorresDeHanoiMovimientos_TextChanged(object sender, EventArgs e)
         {
@@ -82,27 +92,37 @@ namespace Numeros.Hanoi
         /// <param name="e"></param>
         private void introducirNumeros_TextChanged(object sender, EventArgs e)
         {
-
-            if (int.TryParse(introducirNumeros.Text, out numDiscos) && numDiscos > 0 && numDiscos < 10)
+            try
             {
 
-                bJugarTorres.Enabled = true;
-
-            }
-            else
-            {
-
-                bJugarTorres.Enabled = false;
-
-                if (!string.IsNullOrEmpty( introducirNumeros.Text))
+                if (int.TryParse(introducirNumeros.Text, out numDiscos) && numDiscos > 0 && numDiscos < 10)
                 {
-                    MessageBox.Show("Para jugar solo puede ser un número entre 1 y 9");
 
-                    introducirNumeros.Text = "";
+                    bJugarTorres.Enabled = true;
 
                 }
-                            
+                else
+                {
+
+                    bJugarTorres.Enabled = false;
+
+                    if (!string.IsNullOrEmpty(introducirNumeros.Text))
+                    {
+                        MessageBox.Show("Para jugar solo puede ser un número entre 1 y 9");
+
+                        introducirNumeros.Text = "";
+
+                    }
+
+                }
+
             }
+            catch (Exception exCatch)
+            {
+
+                MessageBox.Show("Se ha producido un error " + exCatch);
+            }
+           
 
         }
     }

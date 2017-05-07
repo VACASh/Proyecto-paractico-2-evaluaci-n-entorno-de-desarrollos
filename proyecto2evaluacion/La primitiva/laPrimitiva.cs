@@ -18,6 +18,7 @@ namespace Numeros.Primitiva
     /// </summary>
     public partial class jugarPrimitiva : Form
     {
+
         LaPrimitivaLogica oPrimitiva = new LaPrimitivaLogica();
 
         const int kPrimitiva = 6;
@@ -45,15 +46,26 @@ namespace Numeros.Primitiva
         /// <param name="e">sin uso</param>
         private void bMuestraPremio(object sender, EventArgs e)
         {
-            
-            oPrimitiva.rellenarPremiado();
+            try
+            {
 
-            string textoMostrar = oPrimitiva.textoLoteria();
+                oPrimitiva.rellenarPremiado();
 
-            MessageBox.Show(textoMostrar);
+                string textoMostrar = oPrimitiva.textoLoteria();
 
-            bProbarSuerte.Enabled = false;
-            bReiniciarLaPrimitiva.Enabled = true;
+                MessageBox.Show(textoMostrar);
+
+                bProbarSuerte.Enabled = false;
+                bReiniciarLaPrimitiva.Enabled = true;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Se ha producido un error " + ex.Message);
+
+            }
+           
 
         }
 
@@ -65,45 +77,52 @@ namespace Numeros.Primitiva
         /// <param name="e">sin uso</param>
         private void bRellenaTuPrimitiva(object sender, EventArgs e)
         {
-            
             int numeroIngresas = -1;
 
-            if (contadorDeNumeros < kPrimitiva)
+            try
             {
 
-                if (int.TryParse(tRellenarPrimitiva.Text, out numeroIngresas) && numeroIngresas > 0
-                    && numeroIngresas < 50)
+                if (contadorDeNumeros < kPrimitiva)
                 {
-                    MessageBox.Show(oPrimitiva.rellenarPrimitiva(numeroIngresas));
 
-                    tRellenarPrimitiva.Text = null;
+                    if (int.TryParse(tRellenarPrimitiva.Text, out numeroIngresas) && numeroIngresas > 0
+                        && numeroIngresas < 50)
+                    {
+                        MessageBox.Show(oPrimitiva.rellenarPrimitiva(numeroIngresas));
+
+                        tRellenarPrimitiva.Text = null;
+
+                        bRellenarPrimitiva.Enabled = false;
+
+                        contadorDeNumeros++;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inserte un valor valido");
+
+                    }
+
+                }
+
+                if (contadorDeNumeros == 6)
+                {
+                    MessageBox.Show("ya has ingresado todos los números");
+
+                    tRellenarPrimitiva.Enabled = false;
 
                     bRellenarPrimitiva.Enabled = false;
 
-                    contadorDeNumeros++;
-                }
-                else
-                {
-                    MessageBox.Show("Inserte un valor valido");
+                    bProbarSuerte.Enabled = true;
 
                 }
 
             }
-
-            if(contadorDeNumeros==6)
+            catch (Exception ex )
             {
-                MessageBox.Show("ya has ingresado todos los números");
 
-                tRellenarPrimitiva.Enabled = false;
+                MessageBox.Show("Se ha producido un error " + ex.Message);
 
-                bRellenarPrimitiva.Enabled = false;
-
-                bProbarSuerte.Enabled = true;
-
-            }
-
-
-
+            }          
 
         }
 
@@ -117,6 +136,12 @@ namespace Numeros.Primitiva
             tRellenarPrimitiva.MaxLength = 2;
         }
 
+        /// <summary>
+        /// textchanged del texto rellenar primitiva  donde se controla que no este vacio
+        /// </summary>
+        /// <remarks>si no es ta vacio activa el boton para poder jugar</remarks>
+        /// <param name="sender">lanza el envento del textchanged</param>
+        /// <param name="e">sin uso</param>
         private void tRellenarPrimitiva_TextChanged(object sender, EventArgs e)
         {
             string comprobarVacio = tRellenarPrimitiva.Text;
@@ -131,19 +156,40 @@ namespace Numeros.Primitiva
            
         }
 
+        /// <summary>
+        /// Boton que reinicia la primitiva para empezar otra vez a jugar
+        /// </summary>
+        /// <remarks>Vuelve a activar los botones para poder jugar</remarks>
+        /// <param name="sender">Lanza el boton de reiniciar la primtiva</param>
+        /// <param name="e">sin uso</param>
         private void bReiniciarLaPrimitiva_Click(object sender, EventArgs e)
         {
+            try
+            {
 
-            tRellenarPrimitiva.Enabled = true;
-            bRellenarPrimitiva.Enabled = true;
-            bProbarSuerte.Enabled = false;
-            bReiniciarLaPrimitiva.Enabled = false;
+                tRellenarPrimitiva.Enabled = true;
+                bRellenarPrimitiva.Enabled = true;
+                bProbarSuerte.Enabled = false;
+                bReiniciarLaPrimitiva.Enabled = false;
 
-            oPrimitiva.borrarLista();
+                oPrimitiva.borrarLista();
 
-            contadorDeNumeros = 0;
+                contadorDeNumeros = 0;
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show("Se ha producido un error " + ex.Message);
+
+            }
+           
         }
 
+        /// <summary>
+        /// evento lick del label no tiene uso
+        /// </summary>
+        /// <param name="sender">lanza el evento click del label</param>
+        /// <param name="e">sin uso</param>
         private void ingresarNumerosQueJuegas_Click(object sender, EventArgs e)
         {
 
