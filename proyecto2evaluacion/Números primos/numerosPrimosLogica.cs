@@ -45,7 +45,7 @@ namespace Numeros.Primos
         /// <summary>
         /// Almacena los números primos dentro de la matriz en un string 
         /// </summary>
-        /// <param name="cualquierMatrizComprobar">Matriz de números</param>
+        /// <param name="cualquierMatrizComprobar">Matriz de números que se le pasa para comrpbar</param>
         /// <returns>Devuelve string con los números primos</returns>
         public static string comprobarMatriz(int[,] cualquierMatrizComprobar)
         {

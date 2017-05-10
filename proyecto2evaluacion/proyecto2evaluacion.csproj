@@ -92,6 +92,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recursosProyecto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>recursosProyecto.resx</DependentUpon>
+    </Compile>
     <Compile Include="Torres de Hanoi\torresDeHanoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +126,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="recursosProyecto.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>recursosProyecto.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Torres de Hanoi\torresDeHanoi.resx">
       <DependentUpon>torresDeHanoi.cs</DependentUpon>
     </EmbeddedResource>

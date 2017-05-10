@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pruebaUnitariaProyecto3Eva"
 		{03BBD2BA-3836-4EFF-96AD-40F1821E28AD} = {03BBD2BA-3836-4EFF-96AD-40F1821E28AD}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyecto2evaluacion.Tests", "proyecto2evaluacion.Tests\proyecto2evaluacion.Tests.csproj", "{70FAF2F8-5800-406D-AF2D-1A5D58B0D063}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{47512267-7395-4420-BAAF-C61CEAE3EBB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47512267-7395-4420-BAAF-C61CEAE3EBB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47512267-7395-4420-BAAF-C61CEAE3EBB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70FAF2F8-5800-406D-AF2D-1A5D58B0D063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70FAF2F8-5800-406D-AF2D-1A5D58B0D063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70FAF2F8-5800-406D-AF2D-1A5D58B0D063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70FAF2F8-5800-406D-AF2D-1A5D58B0D063}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -77,8 +77,8 @@ namespace Numeros.Fibonacci
                     }
                     else
                     {
-
-                        MessageBox.Show("El número debe ser mayor de 0");
+                        string mayorDe0 = proyecto2evaluacion.recursosProyecto.stringMayorDe0;
+                        MessageBox.Show(mayorDe0);
 
                     }
 
@@ -89,14 +89,14 @@ namespace Numeros.Fibonacci
 
                     if (numIntroducido >= int.MaxValue)
                     {
-
-                        MessageBox.Show("El número introducido supera el valor maximo permitido para un entero");
+                        string noPermitido = proyecto2evaluacion.recursosProyecto.stringNoPermitido;
+                        MessageBox.Show(noPermitido);
 
                     }
                     else
                     {
-
-                        MessageBox.Show("Inserte un número , el resto de parámetros son inválidos");
+                        string inserteNumero = proyecto2evaluacion.recursosProyecto.stringInserteNum;
+                        MessageBox.Show(inserteNumero);
 
                     }
 

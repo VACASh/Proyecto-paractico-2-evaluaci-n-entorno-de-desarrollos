@@ -39,7 +39,7 @@ namespace Numeros.Primitiva
         /// <summary>
         /// String donde compara la lista de jeugos con la lista premiada y va añadiendo el número de aciertos
         /// </summary>
-        /// <remarks>Si haciertas todos te dice que has ganado, si no te dice los números que has acertado.
+        /// <remarks>Si aciertas todos te dice que has ganado, si no te dice los números que has acertado.
         /// en el caso de que no aciertes nada tambien te devolvera que no has acertado ninguno </remarks>
         /// <returns>Devuelve el string con lo que has acertado </returns>
         public string textoLoteria()
@@ -79,8 +79,8 @@ namespace Numeros.Primitiva
         }
         /// <summary>
         /// rellena el arraylist de los números que vas a jugar .
-        /// <remarks>ingresas los números por inputbox  llama al metodo comprobarrrepe para
-        /// que no ingreses números repetidos si esta repetido no avanzas y tienes que volver a ingresarlo</remarks>
+        /// <remarks>Vas ingresando números y llama al metodo para comrpbar que no este repetido si esta repetido no lo ingresa
+        /// y te vuelve a pedir que lo ingreses</remarks>
         /// </summary>
         public string rellenarPrimitiva(int numeroQueIngresas)
         {
