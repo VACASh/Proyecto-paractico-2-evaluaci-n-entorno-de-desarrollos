@@ -12,7 +12,7 @@ using System.Resources;
 namespace Numeros.Fibonacci
 {
     /// <summary>
-    /// clase  de números fibonacci
+    /// clase parcial  de números fibonacci
     /// </summary>
     public partial class numFibonacci : Form
     {
@@ -64,7 +64,7 @@ namespace Numeros.Fibonacci
             try
             {
 
-                if (int.TryParse(tFibo.Text, out numIntroducido) && numIntroducido < int.MaxValue && numIntroducido > 0)
+                if (int.TryParse(tFibo.Text, out numIntroducido) )
                 {
 
                     if (numIntroducido > 0)
@@ -115,6 +115,7 @@ namespace Numeros.Fibonacci
 
 
         }
+
         /// <summary>
         /// Usado para limitar el tamaño a 10 caracteres
         /// </summary>
@@ -126,8 +127,11 @@ namespace Numeros.Fibonacci
             tFibo.MaxLength = 10;
             if (!int.TryParse(tFibo.Text, out int resultadoEsperado) && !string.IsNullOrEmpty(tFibo.Text))
             {
-                MessageBox.Show("inserte un valor adecuado no sobrepase el valor maximo permitido por visual stuido");
+
+                MessageBox.Show("inserte un valor adecuado que no sobrepase el valor maximo permitido por visual stuido, ni con decimales");
+
                 tFibo.Text = "";
+                
             }
           
             

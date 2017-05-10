@@ -58,6 +58,7 @@ namespace Numeros.Hanoi
             {
 
                 MessageBox.Show("Se ha producido un error " + exCatch);
+
             }
             
         }

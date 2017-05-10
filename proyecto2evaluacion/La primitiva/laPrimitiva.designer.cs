@@ -33,6 +33,7 @@
             this.tRellenarPrimitiva = new System.Windows.Forms.TextBox();
             this.lIngresarNumeros = new System.Windows.Forms.Label();
             this.bReiniciarLaPrimitiva = new System.Windows.Forms.Button();
+            this.lInformativo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bRellenarPrimitiva
@@ -87,12 +88,23 @@
             this.bReiniciarLaPrimitiva.UseVisualStyleBackColor = true;
             this.bReiniciarLaPrimitiva.Click += new System.EventHandler(this.bReiniciarLaPrimitiva_Click);
             // 
+            // lInformativo
+            // 
+            this.lInformativo.AutoSize = true;
+            this.lInformativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lInformativo.Location = new System.Drawing.Point(12, 22);
+            this.lInformativo.Name = "lInformativo";
+            this.lInformativo.Size = new System.Drawing.Size(408, 16);
+            this.lInformativo.TabIndex = 5;
+            this.lInformativo.Text = "Se juega con números del 1 al 49 no validos otros valores";
+            // 
             // jugarPrimitiva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(427, 333);
+            this.Controls.Add(this.lInformativo);
             this.Controls.Add(this.lIngresarNumeros);
             this.Controls.Add(this.bReiniciarLaPrimitiva);
             this.Controls.Add(this.tRellenarPrimitiva);
@@ -113,6 +125,7 @@
         private System.Windows.Forms.TextBox tRellenarPrimitiva;
         private System.Windows.Forms.Label lIngresarNumeros;
         private System.Windows.Forms.Button bReiniciarLaPrimitiva;
+        private System.Windows.Forms.Label lInformativo;
     }
 }
 

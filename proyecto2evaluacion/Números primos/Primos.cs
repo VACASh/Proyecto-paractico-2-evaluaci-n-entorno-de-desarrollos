@@ -70,7 +70,7 @@ namespace Numeros.Primos
 
                 MessageBox.Show("Se ha producido un eror " + exCatch);
             }
-          
+
 
         }
 
@@ -101,9 +101,7 @@ namespace Numeros.Primos
                 //uso la condicion de que los números no sean menor de 0 ni mayor que el maxvalue para controlar el boton
                 if (int.TryParse(tMatriz00.Text, out numeroMatriz00) && int.TryParse(tMatriz10.Text, out numeroMatriz10)
                     && int.TryParse(tMatriz01.Text, out numeroMatriz01) && int.TryParse(tMatriz11.Text, out numeroMatriz11)
-                    && numeroMatriz00 > 0 && numeroMatriz00 < int.MaxValue && numeroMatriz10 > 0
-                    && numeroMatriz10 < int.MaxValue && numeroMatriz01 > 0 && numeroMatriz01 < int.MaxValue
-                    && numeroMatriz11 > 0 && numeroMatriz11 < int.MaxValue)
+                    && numeroMatriz00 > 0 && numeroMatriz10 > 0 && numeroMatriz01 > 0 && numeroMatriz11 > 0)
                 {
 
                     bIngresarNumeros.Enabled = true;
@@ -122,7 +120,7 @@ namespace Numeros.Primos
                             || !string.IsNullOrEmpty(tMatriz10.Text) || !string.IsNullOrEmpty(tMatriz11.Text))
                         {
 
-                            MessageBox.Show("Para jugar solo puede ser un número entre 1 y maxvalue, no validos otros valores");
+                            MessageBox.Show("Para jugar solo puede ser un número entre 1 y maxvalue, no permitidos decimales ni otros caractéres");
 
                             tMatriz00.Text = "";
                             tMatriz01.Text = "";

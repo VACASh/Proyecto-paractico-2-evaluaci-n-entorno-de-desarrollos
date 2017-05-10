@@ -42,7 +42,7 @@ namespace Numeros.Fibonacci
                 numFibo1 = numFibo1 + numFibo2;
                 numFibo2 = auxFibo;
 
-                //revisar lo uso porque cuando el valor de numFibo1 + numFIbo2
+                
                 //sobrepasan el maxvalue se vuelve un número negativo
                 if (numFibo1 < 0)
                 {
