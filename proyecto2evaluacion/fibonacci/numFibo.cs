@@ -77,6 +77,7 @@ namespace Numeros.Fibonacci
                     }
                     else
                     {
+                      
                         string mayorDe0 = proyecto2evaluacion.recursosProyecto.stringMayorDe0;
                         MessageBox.Show(mayorDe0);
 

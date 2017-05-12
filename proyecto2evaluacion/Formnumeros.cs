@@ -70,7 +70,7 @@ namespace Numeros
         /// <param name="e">sin uso</param>
         private void bTorresHanoi(object sender, EventArgs e)
         {
-
+            
             MessageBox.Show("Esta aplicacion te pide que ingreses un números de discos para jugar a torres de hanoi y te te indica cuales son los movimientos que debes hacer");
             Hanoi.torresHanoi oHanoi = new Hanoi.torresHanoi();
             oHanoi.ShowDialog();
