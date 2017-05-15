@@ -39,7 +39,6 @@
             this.bMostrar.Name = "bMostrar";
             this.bMostrar.Size = new System.Drawing.Size(75, 70);
             this.bMostrar.TabIndex = 0;
-            this.bMostrar.Text = "mostrar";
             this.bMostrar.UseVisualStyleBackColor = true;
             this.bMostrar.Click += new System.EventHandler(this.bFibo);
             // 
@@ -56,9 +55,8 @@
             this.lFibonacci.AutoSize = true;
             this.lFibonacci.Location = new System.Drawing.Point(22, 46);
             this.lFibonacci.Name = "lFibonacci";
-            this.lFibonacci.Size = new System.Drawing.Size(137, 13);
+            this.lFibonacci.Size = new System.Drawing.Size(0, 13);
             this.lFibonacci.TabIndex = 2;
-            this.lFibonacci.Text = "Ingrese un número positivo:";
             // 
             // numFibonacci
             // 

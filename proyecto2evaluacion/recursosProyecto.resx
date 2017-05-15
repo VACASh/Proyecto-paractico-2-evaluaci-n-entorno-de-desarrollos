@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="stBotonFibo" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="stError" xml:space="preserve">
+    <value>Se ha producido un error</value>
+  </data>
+  <data name="stFibonacciIntroducidos" xml:space="preserve">
+    <value>Estos son los números fibonacci hasta el número introducido: </value>
+  </data>
+  <data name="stLabelFibo" xml:space="preserve">
+    <value>Ingrese un número positivo :</value>
+  </data>
   <data name="stringInserteNum" xml:space="preserve">
     <value>Inserte un número , el resto de parámetros son inválidos</value>
   </data>
@@ -125,5 +137,8 @@
   </data>
   <data name="stringNoPermitido" xml:space="preserve">
     <value>El número introducido supera el valor maximo permitido para un entero</value>
+  </data>
+  <data name="stValoresPermitidos" xml:space="preserve">
+    <value>inserte un valor adecuado que no sobrepase el valor maximo permitido por visual stuido, ni con decimales</value>
   </data>
 </root>

@@ -47,7 +47,9 @@ namespace Numeros.Fibonacci
         /// <param name="e">sin uso</param>
         private void Formfibonacci_Load(object sender, EventArgs e)
         {
-
+            lFibonacci.Text = proyecto2evaluacion.recursosProyecto.stLabelFibo;
+            bMostrar.Text = proyecto2evaluacion.recursosProyecto.stBotonFibo;
+        
         }
 
         /// <summary>
@@ -106,8 +108,9 @@ namespace Numeros.Fibonacci
             }
             catch (Exception ex)
             {
+                string errorCatch = proyecto2evaluacion.recursosProyecto.stError;
 
-                MessageBox.Show("Se ha producido un error " + ex.Message);
+                MessageBox.Show(errorCatch + ex.Message);
 
             }
             
@@ -128,8 +131,9 @@ namespace Numeros.Fibonacci
             tFibo.MaxLength = 10;
             if (!int.TryParse(tFibo.Text, out int resultadoEsperado) && !string.IsNullOrEmpty(tFibo.Text))
             {
+                string valoresPermitidos = proyecto2evaluacion.recursosProyecto.stValoresPermitidos;
 
-                MessageBox.Show("inserte un valor adecuado que no sobrepase el valor maximo permitido por visual stuido, ni con decimales");
+                MessageBox.Show(valoresPermitidos);
 
                 tFibo.Text = "";
                 

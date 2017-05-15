@@ -61,6 +61,42 @@ namespace proyecto2evaluacion {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Mostrar.
+        /// </summary>
+        internal static string stBotonFibo {
+            get {
+                return ResourceManager.GetString("stBotonFibo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Se ha producido un error.
+        /// </summary>
+        internal static string stError {
+            get {
+                return ResourceManager.GetString("stError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estos son los números fibonacci hasta el número introducido: .
+        /// </summary>
+        internal static string stFibonacciIntroducidos {
+            get {
+                return ResourceManager.GetString("stFibonacciIntroducidos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ingrese un número positivo :.
+        /// </summary>
+        internal static string stLabelFibo {
+            get {
+                return ResourceManager.GetString("stLabelFibo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Inserte un número , el resto de parámetros son inválidos.
         /// </summary>
         internal static string stringInserteNum {
@@ -84,6 +120,15 @@ namespace proyecto2evaluacion {
         internal static string stringNoPermitido {
             get {
                 return ResourceManager.GetString("stringNoPermitido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a inserte un valor adecuado que no sobrepase el valor maximo permitido por visual stuido, ni con decimales.
+        /// </summary>
+        internal static string stValoresPermitidos {
+            get {
+                return ResourceManager.GetString("stValoresPermitidos", resourceCulture);
             }
         }
     }

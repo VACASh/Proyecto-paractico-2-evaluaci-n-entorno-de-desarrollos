@@ -27,7 +27,7 @@ namespace Numeros.Fibonacci
             int numFibo2 = 1;
             int auxFibo = 0;
 
-            string textoAlmacenaFibo = "Estos son los números fibonacci hasta el número introducido: ";
+            string textoAlmacenaFibo = proyecto2evaluacion.recursosProyecto.stFibonacciIntroducidos;
 
 
 
